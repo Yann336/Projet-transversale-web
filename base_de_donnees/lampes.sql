@@ -64,6 +64,32 @@ CREATE TABLE LampImages(
     CONSTRAINT fk_img_outdoor FOREIGN KEY (idOutdoorLamp) REFERENCES OutdoorLamps (idOutdoorLamp)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+CREATE TABLE Customers(
+    idClient INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    lastName VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    adress VARCHAR(50) NOT NULL,
+    country VARCHAR(50) NOT NULL,
+    postCode VARCHAR(10) NOT NULL,
+    numberPhone VARCHAR(20) NOT NULL,
+    PRIMARY KEY(idClient)
+) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE Orders(
+    idOrder INT NOT NULL AUTO_INCREMENT,
+    idLivingRoomLamp INT NULL,
+    idWallLamp INT NULL,
+    idOutdoorLamp INT NULL,
+    orderDate DATE NOT NULL,
+    quantity INT(10) NOT NULL,
+    price DECIMAL(5, 2) NOT NULL,
+    PRIMARY KEY(idOrder),
+    CONSTRAINT fk_order_living FOREIGN KEY (idLivingRoomLamp) REFERENCES LivingRoomLamps (idLivingRoomLamp),
+    CONSTRAINT fk_order_wall FOREIGN KEY (idWallLamp) REFERENCES WallLamps (idWallLamp),
+    CONSTRAINT fk_order_outdoor FOREIGN KEY (idOutdoorLamp) REFERENCES OutdoorLamps (idOutdoorLamp)   
+) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 INSERT INTO LampTypes (typeName, catégorieDescription) VALUES
 ('Lampadaire', 'Lampes sur pied offrant un éclairage diffus et élégant pour les grands espaces.'),
 ('Suspension', 'Lampes suspendues au design contemporain, idéales pour habiller une pièce.'),
