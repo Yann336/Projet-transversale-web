@@ -11,6 +11,7 @@
                     autocomplete="email"/>
             </label>
             <label>
+                Mot de passe
             <input
                 type="password"
                 name="password"
