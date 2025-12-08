@@ -51,14 +51,14 @@ CREATE TABLE OutdoorLamps(
     CONSTRAINT fk_outdoor_type FOREIGN KEY (idType) REFERENCES LampTypes (idType)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-CREATE TABLE LampImages(
-    idImage INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE LampPictures(
+    idPicture INT NOT NULL AUTO_INCREMENT,
     imagePath VARCHAR(255),
     altText VARCHAR(200) NULL,
     idLivingRoomLamp INT NULL,
     idWallLamp INT NULL,
     idOutdoorLamp INT NULL,
-    PRIMARY KEY (idImage),
+    PRIMARY KEY (idPicture),
     CONSTRAINT fk_img_living FOREIGN KEY (idLivingRoomLamp) REFERENCES LivingRoomLamps (idLivingRoomLamp),
     CONSTRAINT fk_img_wall FOREIGN KEY (idWallLamp) REFERENCES WallLamps (idWallLamp),
     CONSTRAINT fk_img_outdoor FOREIGN KEY (idOutdoorLamp) REFERENCES OutdoorLamps (idOutdoorLamp)
@@ -125,19 +125,19 @@ INSERT INTO OutdoorLamps (idType, power, color, price, style, material, dimensio
 
 
  -- Images pour les lampes de salon
-INSERT INTO LampImages (imagePath, altText, idLivingRoomLamp) VALUES
+INSERT INTO LampPictures (imagePath, altText, idLivingRoomLamp) VALUES
 ('images/livingroom/lampadaire_blanc.jpg', 'Lampadaire blanc mat au design minimaliste', 1),
 ('images/livingroom/lampadaire_noir.jpg', 'Lampadaire noir satiné au style contemporain', 2),
 ('images/livingroom/suspension_opale.jpg', 'Suspension en verre opale au design italien', 3);
 
 -- Images pour les lampes murales
-INSERT INTO LampImages (imagePath, altText, idWallLamp) VALUES
+INSERT INTO LampPictures (imagePath, altText, idWallLamp) VALUES
 ('images/wall/blanc_opalin.jpg', 'Applique murale blanche opaline géométrique', 1),
 ('images/wall/gris_anthracite.jpg', 'Applique murale gris anthracite architectural', 2),
 ('images/wall/cuivre_brosse.jpg', 'Applique murale cuivre brossé élégante', 3);
 
 -- Images pour les lampes d’extérieur
-INSERT INTO LampImages (imagePath, altText, idOutdoorLamp) VALUES
+INSERT INTO LampPictures (imagePath, altText, idOutdoorLamp) VALUES
 ('images/outdoor/blanc_mat.jpg', 'Lampe d’extérieur blanche mat moderniste', 1),
 ('images/outdoor/noir.jpg', 'Lampe extérieure noire architecturale', 2),
 ('images/outdoor/gris_clair.jpg', 'Lampe extérieure gris clair sculpturale', 3);
