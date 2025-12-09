@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="">
-</head>
-
-<body>
-    <section id="Panier">
+<section id="Panier">
         <h1>Panier</h1>
         <p>Vendu et expédié par Clarté Ornée</p>
 
@@ -81,7 +70,5 @@
         </div>
     </section>
 
-
-</body>
 
 </html>
