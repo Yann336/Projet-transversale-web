@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="p.css">
     <title>Document</title>
-    <link rel="stylesheet" href="">
 </head>
+
 
 <body>
     <section id="Panier">
         <h1>Panier</h1>
         <p>Vendu et expédié par Clarté Ornée</p>
 
-        <div>
+        <div class="article">
+            <p>image article (php)</p>
             <button class="btn-delete" aria-label="Supprimer">
-                <p>image article (php)</p>
-                <img src="Photos/téléchargement.jpg" alt="Logo corbeille" width="50">
+                
+                <img src="Photos/poubelle.png" alt="Logo corbeille" width="50">
             </button>
         </div>
 
@@ -37,7 +38,7 @@
         </div>
 
         <div class="total-container">
-            <span class="label">Total à payer (prix € (php))</span>
+            <span>Total à payer (prix € (php))</span>
         </div>
 
         <div>
