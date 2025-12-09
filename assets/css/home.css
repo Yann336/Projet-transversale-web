@@ -1,5 +1,6 @@
 body{
     background:rgb(255, 244, 228);
+    padding: 20;
 }
 h1{
     color: rgb(186, 146, 108);
@@ -30,6 +31,15 @@ h1{
     color:rgb(83, 39, 23);
 }
 
-h2{
+h2 , h3{
     color: rgb(186, 146, 108);
+    text-decoration: underline;
+}
+.grid{
+    margin-bottom: 20px;
+}
+
+img{
+    height:100px;
+    width:auto;
 }
