@@ -2,8 +2,10 @@
     <h1>Clarté Ornée</h1>
 
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quo sunt architecto saepe adipisci nulla deserunt nihil placeat eius earum ipsa, sint tempora corporis reprehenderit, quia eaque voluptas repellat veniam?</p>
+    <div class="hero-buttons">
         <a href="#" role="button"> Nos lampes </a>
         <a href="#" role="button"> Votre Panier </a>
+    </div>
 </section>
 
 
