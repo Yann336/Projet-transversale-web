@@ -1,4 +1,4 @@
-<section id = hero>
+<section id = "hero">
     <h1>Clarté Ornée</h1>
 
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quo sunt architecto saepe adipisci nulla deserunt nihil placeat eius earum ipsa, sint tempora corporis reprehenderit, quia eaque voluptas repellat veniam?</p>
