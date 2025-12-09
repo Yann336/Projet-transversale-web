@@ -9,9 +9,9 @@
             </ul>
             <ul>
                 <li><a href="index.php?page=home">Accueil</a></li>
-                <li><a href="#">Nos lampes</a></li>
-                <li><a href="#">Se connecter</a></li>
-                <li><a href="#">Panier</a></li>
+                <li><a href="index.php?page=lamp-details">Nos lampes</a></li>
+                <li><a href="index.php?page=connection">Se connecter</a></li>
+                <li><a href="index.php?page=Panier">Panier</a></li>
             </ul>
         </nav>
     </div>
