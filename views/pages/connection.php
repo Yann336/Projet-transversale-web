@@ -1,6 +1,26 @@
+<?php
+$_SESSION['pseudo']='toto';
+
+ if (empty($_POST) == TRUE){
+                $feedback="";
+            }
+            else{
+                if ($_POST["email"] == "admin@gmail.com" && $_POST["password"] == "admin"){
+                    $_SESSION['authenticated']= true; 
+                    header('Location: index.php?page=home');
+                    exit;
+                }
+                else{
+                    $feedback = "Identifiant ou mot de passe incorrect";
+                }
+            }
+?>
+
+
+
 <section id="form">
     <h1>Connection</h1>
-    <form>
+    <form method = post>
         <fieldset class=grid>
             <label>
                 Email
@@ -20,6 +40,9 @@
                 autocomplete="current-password"/>
             </label>
         </fieldset>
+        <?php if ($feedback != null) {   ?>
+                <p><?= $feedback ?> </p>
+        <?php } ?>
             <input
 			type="submit"
 			value="Se Connecter" />       
