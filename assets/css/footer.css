@@ -1,0 +1,41 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+a{
+    color:rgb(119, 70, 52);
+}
+
+a:hover{
+    color:rgb(83, 39, 23);
+}
+/* .container{
+    background-image: url("imagebois.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 20px; 
+    color: white;              
+
+} */
+ .container{
+    background-color: rgb(186, 146, 108);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 20px; 
+    color: white;
+ }
+
+footer {
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
