@@ -3,18 +3,16 @@ body{
     background: rgb(247, 223, 191);
     margin: 0;
     height: 100vh;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 #form {
     margin: auto;
     background: white;
     padding: 25px;
     border-radius: 12px;
-    width: 50%;
-    height: 40%;
+    min-width: 50%;
+    min-height: 40%;
+    margin: 40px;
+
 }
 
  h1 {

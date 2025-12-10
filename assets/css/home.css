@@ -31,10 +31,15 @@ h1{
     color:rgb(83, 39, 23);
 }
 
-h2 , h3{
-    color: rgb(186, 146, 108);
+h2{
+    margin-bottom: 20px;
+    color: rgb(132, 92, 55) ;
     text-decoration: underline;
 }
+h3{
+    color: rgb(83, 39, 23);
+}
+
 .grid{
     margin-bottom: 20px;
 }
