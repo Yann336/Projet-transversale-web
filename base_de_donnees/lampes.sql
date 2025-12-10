@@ -56,6 +56,8 @@ CREATE TABLE Associates(
     idAssociate INT NOT NULL AUTO_INCREMENT,
     idLamp INT NOT NULL,
     idOrder INT NOT NULL,
+    Quantity INT NOT NULL,
+    PriceBought INT NOT NULL,
     PRIMARY KEY (idAssociate),
     CONSTRAINT fk_AssociateLamp FOREIGN KEY (idLamp) REFERENCES Lamps (idLamp),
     CONSTRAINT fk_AssociateOrder FOREIGN KEY (idOrder) REFERENCES Orders(idOrder)
