@@ -24,4 +24,9 @@ $sql = "SELECT * FROM Associates";
 $query = $db->query($sql);
 $associate = $query->fetchall();
 
+
+$sql = "SELECT DISTINCT TypeLamp FROM Lamps";
+$query = $db->query($sql);
+$typelamps = $query->fetchall();
+
 ?>

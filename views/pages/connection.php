@@ -1,8 +1,6 @@
 <?php
 $_SESSION['pseudo'] = 'toto';
 include('models/lampes.php');
-
-var_dump(password_verify('sherlock123', '$2y$10$7/nsF2qoBGZjputvPiqx9uMQuTu2izmv2nciEXeJwooY1gVrixrpy'));
  
 $feedback = "";
 
