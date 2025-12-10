@@ -1,3 +1,10 @@
+<?php 
+session_start(); 
+
+if (empty($_GET['page']) == TRUE){
+                $_GET['page']='home';
+            }
+?>
 
 <!DOCTYPE html>
 <html lang="fr">

@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 
     <script>
         function verifierMotsDePasse() {
@@ -19,9 +11,8 @@
             return true;
         }
     </script>
-</head>
 
-<body>
+
     <h1>Inscription</h1>
 
     <form action="" method="post" onsubmit="return verifierMotsDePasse()">
@@ -69,7 +60,3 @@
 
         <input type="submit" value="Valider">
     </form>
-
-</body>
-
-</html>
