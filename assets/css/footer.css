@@ -1,8 +1,8 @@
-html, body {
+.page_footer html, body {
     height: 100%;
 }
 
-body{
+.page_footer body{
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
@@ -10,11 +10,11 @@ body{
     margin-right: 20;
 }
 
-a{
+.page_footer a{
     color:rgb(119, 70, 52);
 }
 
-a:hover{
+.page_footer a:hover{
     color:rgb(83, 39, 23);
 }
 /* .container{
@@ -25,14 +25,14 @@ a:hover{
     color: white;              
 
 } */
- .container{
+.page_footer .container{
     background-color: rgb(186, 146, 108);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
  }
 
-footer {
+.page_footer footer {
 	display: flex;
 	justify-content: space-between;
     align-items: center;
