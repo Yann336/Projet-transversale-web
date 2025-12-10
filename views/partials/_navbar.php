@@ -10,7 +10,6 @@ if (!empty($_SESSION['authenticated'])){
 
 ?>
 
-
 <header>
     <div class = navbar>
         <nav>

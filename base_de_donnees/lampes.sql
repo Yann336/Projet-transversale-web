@@ -3,6 +3,7 @@ CREATE DATABASE Clarte_Ornee CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE Clarte_Ornee;
 
 CREATE TABLE Lamps(
+    name VARCHAR (50) NOT NULL,
     idLamp INT NOT NULL AUTO_INCREMENT,
     TypeLamp VARCHAR (50) NOT NULL,
     Power VARCHAR (50) NOT NULL,

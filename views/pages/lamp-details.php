@@ -1,10 +1,31 @@
 <?php
-    include('models/lampes.php');
-// Faire le script php qui dira "si je clique sur l'image tu affichera... (les détails de la lampe)"
+
+include('models/select-details.php');
+$id= $_GET['id'];
 
 ?>
 
-    <!-- Relier le css qui permettra de paramètrer l'affichage des informations -->
+<h1> <?= $lamps["name"] ?></h1>
 
-    <!-- Inclure via php les informations (image, description, prix etc...) -->
+<h3> <?= $lamps["TypeLamp"] ?> </h3>
+
+<img src='<?= $lamps["PathPicture"] ?>' alt='Image random'>
+
+<p> 
+    Puissance : <?= $lamps["Power"] ?> <br>
+    Couleur : <?= $lamps["Color"] ?> <br>
+    Matériaux : <?= $lamps["Material"] ?> <br>
+    Dimensions : <?= $lamps["Dimensions"] ?> <br>
+</p>
+
+<p>
+    <?= $lamps["Description"] ?>
+</p>
+
+<p> Price : <?= $lamps["Price"] ?> </p>
+
+<form method="POST">
+    <input type="hidden" name="idLamp" value="<?= $_GET['id'] ?>">
+    <button type="submit">Ajouter au panier</button>
+</form>
 
