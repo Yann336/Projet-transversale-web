@@ -1,0 +1,47 @@
+.page-navbar html, body {
+    height: 0%;
+}
+
+.page-navbar body{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    width:100%;
+}
+
+.page-navbar a{
+    color:rgb(119, 70, 52);
+    text-decoration: none;
+}
+
+.page-navbar a:hover{
+    color:rgb(83, 39, 23);
+}
+.page-navbar strong{
+    font-size: 40px;
+}
+.page-navbar .navbar{
+    background-color: rgb(186, 146, 108);
+    background-size:cover;
+    background-repeat: no-repeat;
+    color: white;
+        /* gap:20px; */
+ }
+.page-navbar .btn-panier img{
+    width:20px;
+    height:auto;
+    cursor:pointer;
+}
+
+
+
+.page-navbar header{
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+
+    padding: 20px;
+    width :100%;
+}
