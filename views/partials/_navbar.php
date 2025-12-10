@@ -1,5 +1,4 @@
-<div class="page-navbar">
-<header>
+<header class="page-navbar">
     <div class = "navbar">
         <nav>
             <a href="index.php?page=home"><img class="img_logo" src="assets/images/logo_site.png" alt="Logo site"></a>
@@ -13,4 +12,3 @@
         </nav>
     </div>
 </header>
-</div>

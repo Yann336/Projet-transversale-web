@@ -1,18 +1,19 @@
 body{
- font-family: Arial, sans-serif;
     background: rgb(247, 223, 191);
     margin: 0;
     height: 100vh;
 }
 #form {
-    margin: auto;
+    display: grid;
+    align-items: center;
+    margin:auto;
     background: white;
     padding: 25px;
     border-radius: 12px;
-    min-width: 50%;
-    min-height: 40%;
-    margin: 40px;
-
+    width: 50%;
+    height: 40%;
+    margin-bottom: 80px;
+    margin-top: 80px;
 }
 
  h1 {

@@ -1,21 +1,6 @@
-.page-navbar html, body {
-    height: 0%;
-}
-
-.page-navbar body{
-    /* display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-    padding: 0;
-    width:100%; */
-    padding-top: 80px;
-    
-}
-
 .page-navbar a{
     color:rgb(119, 70, 52);
     text-decoration: none;
-    
 }
 
 .page-navbar a:hover{
@@ -27,13 +12,13 @@
 }
 .page-navbar strong{
     font-size: 30px;
+    text-decoration: none;
 }
 .page-navbar .navbar{
     background-color: rgb(186, 146, 108);
-    /* background-size:cover;
-    background-repeat: no-repeat;
-    color: white;  */
+    background-size:cover;
     width:100%;
+    height: 70px;
     display: flex;
     justify-content: center;        
  }
@@ -51,15 +36,14 @@
 }
 
 .page-navbar header{
-	/* display: flex;
+	display: flex;
 	justify-content: space-between;
     align-items: center;
     margin-top: auto; 
-    padding: 20px;*/
     width :100%;
+    height: 50px;
     position:sticky ;
     top:0;
     left: 0;
     z-index: 1000;
-    padding: 20px;
 }
