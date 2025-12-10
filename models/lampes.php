@@ -1,7 +1,6 @@
 <?php
 
-$db = new PDO('mysql:host=localhost;dbname=Clarte_Ornee;charset=utf8mb4' , 'root', '');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+include('dbConnect.php');
 
 $sql = "SELECT * FROM Lamps";
 $query = $db->query($sql);
@@ -12,7 +11,7 @@ $query = $db->query($sql);
 $customers = $query->fetchall();
 
 
-$sql = "SELECT * FROM Basket";
+$sql = "SELECT * FROM Baskets";
 $query = $db->query($sql);
 $basket = $query->fetchall();
 
@@ -21,7 +20,7 @@ $sql = "SELECT * FROM Orders";
 $query = $db->query($sql);
 $orders = $query->fetchall();
 
-$sql = "SELECT * FROM Associate";
+$sql = "SELECT * FROM Associates";
 $query = $db->query($sql);
 $associate = $query->fetchall();
 

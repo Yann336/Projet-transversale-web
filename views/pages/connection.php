@@ -1,38 +1,28 @@
 <?php
-$_SESSION['pseudo']='toto';
+$_SESSION['pseudo'] = 'toto';
+include('models/lampes.php');
 
-// foreach (users as user){
-//     if (empty($_POST) == TRUE){
-//                 $feedback="";
-//             }
-//             else{
-//                 if ($_POST["email"] == user[""] && $_POST["password"] == user[""]){
-//                     $_SESSION['authenticated']= true; 
-//                     header('Location: index.php?page=home');
-//                     exit;
-//                 }
-//                 else{
-//                     $feedback = "Identifiant ou mot de passe incorrect";
-//                 }
-//             }
+var_dump(password_verify('sherlock123', '$2y$10$7/nsF2qoBGZjputvPiqx9uMQuTu2izmv2nciEXeJwooY1gVrixrpy'));
+ 
+$feedback = "";
 
-// }
- if (empty($_POST) == TRUE){
-                $feedback="";
-            }
-            else{
-                if ($_POST["email"] == "admin@gmail.com" && $_POST["password"] == "admin"){
-                    $_SESSION['authenticated']= true; 
-                    header('Location: index.php?page=home');
-                    exit;
-                }
-                else{
-                    $feedback = "Identifiant ou mot de passe incorrect";
-                }
-            }
+if (!empty($_POST)) {
+
+    $found = false;
+
+    foreach ($customers as $user) {
+
+        if ($_POST["email"] == $user["Email"] &&
+            password_verify($_POST["password"], $user["password"])) { 
+            $_SESSION['authenticated'] = true;
+            header('Location: index.php?page=home');
+            exit;
+        }
+    }
+    $feedback = "Identifiant ou mot de passe incorrect";
+}
+
 ?>
-
-
 
 <section id="form">
     <h1>Connection</h1>
