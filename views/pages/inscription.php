@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+    <script>
+        function verifierMotsDePasse() {
+            const mdp1 = document.getElementById("password").value;
+            const mdp2 = document.getElementById("confirm_password").value;
+
+            if (mdp1 !== mdp2) {
+                alert("Les mots de passe ne correspondent pas !");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Inscription</h1>
+
+    <form action="" method="post" onsubmit="return verifierMotsDePasse()">
+        <!-- mettre la page d'acceuil dans action-->
+
+        <label for="Name">Prénom :</label><br>
+        <input type="text" id="Name" name="Name" required><br><br>
+
+        <label for="Lastname">Nom:</label><br>
+        <input type="text" id="Lastname" name="Lastname" required><br><br>
+
+        <label for="Email">Email :</label><br>
+        <input type="email" id="Email" name="Email" required><br><br>
+
+        <br>
+        <label for="Street">Adresse :</label><br>
+        <input type="text" id="Street" name="Street" required><br><br>
+
+        <label for="City">Ville :</label><br>
+        <input type="text" id="City" name="City" required><br><br>
+
+        <label for="Country">Pays :</label><br>
+        <input type="text" id="Country" name="Country" required><br><br>
+
+        <label for="PostCode">Code postal :</label><br>
+        <input type="number" id="PostCode" name="PostCode" required><br><br>
+
+        <label for="Numberphone">Numéro de téléphone :</label>
+        <input type="tel" id="Numberphone" name="NumberPhone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
+            required><br>
+
+
+        <label>Mot de passe :</label><br>
+        <input type="password" id="password" required><br><br>
+
+        <label>Confirmer le mot de passe :</label><br>
+        <input type="password" id="confirm_password" required><br><br>
+
+        <input type="submit" value="Valider">
+    </form>
+
+</body>
+
+</html>

@@ -14,20 +14,11 @@
     </header>
     <form action="">
 
-        <label for="fname">Prénom :</label><br>
-        <input type="text" id="fname" name="fname" required><br><br>
-
-        <label for="lname">Nom de famille :</label><br>
-        <input type="text" id="lname" name="lname" required><br><br>
-
         <label for="email">Email :</label><br>
         <input type="email" id="email" name="email" required><br><br>
 
-        <label for="type_lamp">type lampe :</label><br>
-        <input type="text" id="lamp" name="type_lamp" value="" required><br><br>
-
-        <label for="brand_lamp">marque de la lampe :</label><br>
-        <input type="text" id="lamp" name="brand_lamp" value="" required><br><br>
+        <label for="number_order">n° commande :</label><br>
+        <input type="text" id="order" name="number_order" value="" required><br><br>
 
         <label for="description">veuillez décrire votre probleme :</label><br>
         <textarea name="message" rows="10" cols="30">

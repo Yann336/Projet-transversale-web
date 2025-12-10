@@ -9,14 +9,27 @@
 
 <body>
 
-    <form style="border: 2px solid #000; padding: 20px; width: 300px;">
+    <form>
         <h4>méthode d'expedition</h4>
+
+        <label for="Street">Adresse :</label><br>
+        <input type="text" id="Street" name="Street" required><br><br>
+
+        <label for="City">Ville :</label><br>
+        <input type="text" id="City" name="City" required><br><br>
+
+        <label for="Country">Pays :</label><br>
+        <input type="text" id="Country" name="Country" required><br><br>
+
+        <label for="PostCode">Code postal :</label><br>
+        <input type="number" id="PostCode" name="PostCode" required><br><br>
+
         <input type="radio" id="dpd" name="dpd" value="dpd">
         <label for="dpd">€9,95 Livré par DPD sous 2 à 4 jours ouvrables</label>
     </form>
 
 
-    <form style="border: 2px solid #000; padding: 20px; width: 300px;">
+    <!-- <form>
 
         <h4><strong>mode de paiement</strong></h4>
 
@@ -66,9 +79,26 @@
         <img src="" alt="image">
         <label for="bons_achat">Bons d'achat</label><br><br>
 
+    </form> -->
+    info cb
+    <form action="">
+        <label for="NumberCard">Numéro de carte :</label><br>
+        <input type="number" id="NumberCard" name="NumberCard" required><br><br>
+
+        <label for="ExperyDate">date d'expiration :</label><br>
+        <input type="number" id="ExperyDate" name="ExperyDate" required><br><br>
+
+        <label for="NameCard">nom du titulaire :</label><br>
+        <input type="text" id="NameCard" name="NameCard" required><br><br>
+
+        <label for="SecurityCode">code de securité :</label><br>
+        <input type="number" id="SecurityCode" name="SecurityCode" required><br>
     </form>
 
-    <form style="border: 2px solid #000; padding: 20px; width: 300px;">
+
+
+
+    <form>
         <h4><strong>passez au reglement</strong></h4>
         <a href="">voici le contenue de votre panier</a> <br> <br>
         <button>encaissement</button>
