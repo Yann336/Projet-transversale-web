@@ -1,6 +1,22 @@
 <?php
 $_SESSION['pseudo']='toto';
 
+// foreach (users as user){
+//     if (empty($_POST) == TRUE){
+//                 $feedback="";
+//             }
+//             else{
+//                 if ($_POST["email"] == user[""] && $_POST["password"] == user[""]){
+//                     $_SESSION['authenticated']= true; 
+//                     header('Location: index.php?page=home');
+//                     exit;
+//                 }
+//                 else{
+//                     $feedback = "Identifiant ou mot de passe incorrect";
+//                 }
+//             }
+
+// }
  if (empty($_POST) == TRUE){
                 $feedback="";
             }
