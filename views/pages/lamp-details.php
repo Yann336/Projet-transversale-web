@@ -1,7 +1,5 @@
 <?php
-$db = new PDO('mysql:host=localhost;dbname=Clarte_Ornee;charset=utf8mb4' , 'root', '');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
+    include('models/lampes.php');
 // Faire le script php qui dira "si je clique sur l'image tu affichera... (les détails de la lampe)"
 
 ?>
