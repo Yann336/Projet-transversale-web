@@ -3,45 +3,63 @@
 }
 
 .page-navbar body{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
     padding: 0;
-    width:100%;
+    width:100%; */
+    padding-top: 80px;
+    
 }
 
 .page-navbar a{
     color:rgb(119, 70, 52);
     text-decoration: none;
+    
 }
 
 .page-navbar a:hover{
     color:rgb(83, 39, 23);
 }
+.page-navbar .img_logo{
+    width:40px;
+    height:auto;
+}
 .page-navbar strong{
-    font-size: 40px;
+    font-size: 30px;
 }
 .page-navbar .navbar{
     background-color: rgb(186, 146, 108);
-    background-size:cover;
+    /* background-size:cover;
     background-repeat: no-repeat;
-    color: white;
-        /* gap:20px; */
+    color: white;  */
+    width:100%;
+    display: flex;
+    justify-content: center;        
  }
+
+.page-navbar nav{
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+
 .page-navbar .btn-panier img{
     width:20px;
     height:auto;
     cursor:pointer;
 }
 
-
-
 .page-navbar header{
-	display: flex;
+	/* display: flex;
 	justify-content: space-between;
     align-items: center;
-    margin-top: auto;
-
-    padding: 20px;
+    margin-top: auto; 
+    padding: 20px;*/
     width :100%;
+    position:sticky ;
+    top:0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px;
 }
