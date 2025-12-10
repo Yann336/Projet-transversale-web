@@ -47,11 +47,17 @@
         <input type="text" id="Country" name="Country" required><br><br>
 
         <label for="PostCode">Code postal :</label><br>
-        <input type="number" id="PostCode" name="PostCode" required><br><br>
+        <input type="text" id="PostCode" name="PostCode"
+            inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required><br><br>
 
         <label for="Numberphone">Numéro de téléphone :</label>
-        <input type="tel" id="Numberphone" name="NumberPhone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
-            required><br>
+        <input type="tel"
+            id="Numberphone"
+            name="NumberPhone"
+            pattern="0[1-9]([0-9]{2}){4}"
+            maxlength="10"
+            inputmode="numeric"
+            required>
 
 
         <label>Mot de passe :</label><br>
