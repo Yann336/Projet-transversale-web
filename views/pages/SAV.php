@@ -17,9 +17,6 @@
         <label for="email">Email :</label><br>
         <input type="email" id="email" name="email" required><br><br>
 
-        <label for="number_order">n° commande :</label><br>
-        <input type="text" id="order" name="number_order" value="" required><br><br>
-
         <label for="description">veuillez décrire votre probleme :</label><br>
         <textarea name="message" rows="10" cols="30">
         </textarea><br><br>
