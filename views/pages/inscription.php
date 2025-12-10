@@ -34,7 +34,7 @@
         <input type="text" id="Lastname" name="Lastname" required><br><br>
 
         <label for="Email">Email :</label><br>
-        <input type="email" id="Email" name="Email" required><br><br>
+        <input type="email" placeholder="@gmail.com" id="Email" name="Email" required><br><br>
 
         <br>
         <label for="Street">Adresse :</label><br>
@@ -48,15 +48,16 @@
 
         <label for="PostCode">Code postal :</label><br>
         <input type="text" id="PostCode" name="PostCode"
-            inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required><br><br>
+            inputmode="numeric" placeholder="12345" pattern="[0-9]{5}" maxlength="5" required><br><br>
 
         <label for="Numberphone">Numéro de téléphone :</label>
         <input type="tel"
+            inputmode="numeric"
             id="Numberphone"
             name="NumberPhone"
+            placeholder="0123456789"
             pattern="0[1-9]([0-9]{2}){4}"
             maxlength="10"
-            inputmode="numeric"
             required>
 
 

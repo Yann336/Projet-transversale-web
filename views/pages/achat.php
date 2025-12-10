@@ -23,7 +23,7 @@
 
         <label for="PostCode">Code postal :</label><br>
         <input type="text" id="PostCode" name="PostCode"
-            inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required><br><br>
+            inputmode="numeric" placeholder="12345" pattern="[0-9]{5}" maxlength="5" required><br><br>
 
         <input type="radio" id="dpd" name="dpd" value="dpd">
         <label for="dpd">€9,95 Livré par DPD sous 2 à 4 jours ouvrables</label>
@@ -85,7 +85,7 @@
     <form action="">
         <label for="NumberCard">Numéro de carte :</label><br>
         <input type="text" id="NumberCard" name="NumberCard"
-            inputmode="numeric" pattern="[0-9]{16}" maxlength="16" required><br><br>
+            inputmode="numeric" placeholder="1234567890123456" pattern="[0-9]{16}" maxlength="16" required><br><br>
 
         <label for="ExperyDate">Date d'expiration :</label><br>
         <input type="text" id="ExperyDate" name="ExperyDate"
@@ -93,10 +93,10 @@
 
         <label for="SecurityCode">Code de sécurité :</label><br>
         <input type="text" id="SecurityCode" name="SecurityCode"
-            inputmode="numeric" pattern="[0-9]{3}" maxlength="3" required><br><br>
+            inputmode="numeric" placeholder="123" pattern="[0-9]{3}" maxlength="3" required><br><br>
 
         <label for="NameCard">Nom du titulaire :</label><br>
-        <input type="text" id="NameCard" name="NameCard" required><br><br>
+        <input type="text" placeholder="Joe Dohn" id="NameCard" name="NameCard" required><br><br>
     </form>
 
 

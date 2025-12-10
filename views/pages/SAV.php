@@ -15,7 +15,7 @@
     <form action="">
 
         <label for="email">Email :</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" placeholder="@gmail.com" id="email" name="email" required><br><br>
 
         <label for="description">veuillez décrire votre probleme :</label><br>
         <textarea name="message" rows="10" cols="30">
