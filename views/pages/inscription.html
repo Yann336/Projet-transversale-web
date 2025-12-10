@@ -25,51 +25,43 @@
     <h1>Inscription</h1>
 
     <!-- FORMULAIRE 1 -->
-    <form style="border: 2px solid #000; padding: 20px; width: 300px;" action="" method="post">
+    <form style="border: 2px solid #000; padding: 20px; width: 300px;" action="" method="post"
+        onsubmit="return verifierMotsDePasse()">
         <!-- mettre la page d'acceuil dans action-->
 
         <label for="fname">Prénom :</label><br>
-        <input type="text" id="fname" name="fname"><br><br>
+        <input type="text" id="fname" name="fname" required><br><br>
 
         <label for="lname">Nom de famille :</label><br>
-        <input type="text" id="lname" name="lname"><br><br>
+        <input type="text" id="lname" name="lname" required><br><br>
 
         <label for="email">Email :</label><br>
-        <input type="email" id="email" name="email"><br><br>
+        <input type="email" id="email" name="email" required><br><br>
 
         <label for="phone">Numéro de téléphone :</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}"><br><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
+            required><br><br>
 
         <input type="radio" id="particulier" name="client" value="particulier">
         <label for="particulier">Particulier</label><br>
 
         <input type="radio" id="affaire" name="client" value="affaire">
         <label for="affaire">Affaire</label><br>
-    </form>
 
-    <br>
-
-    <!-- FORMULAIRE 2 -->
-    <form style="border: 2px solid #000; padding: 20px; width: 300px;" action="" method="post">
-
+        <br>
         <label for="adress">Adresse :</label><br>
-        <input type="text" id="adress" name="adress"><br><br>
+        <input type="text" id="adress" name="adress" required><br><br>
 
         <label for="city">Ville :</label><br>
-        <input type="text" id="city" name="city"><br><br>
+        <input type="text" id="city" name="city" required><br><br>
 
         <label for="country">Pays :</label><br>
-        <input type="text" id="country" name="country"><br><br>
+        <input type="text" id="country" name="country" required><br><br>
 
         <label for="postal">Code postal :</label><br>
-        <input type="number" id="postal" name="postal"><br><br>
-    </form>
+        <input type="number" id="postal" name="postal" required><br><br>
 
-    <br>
-
-    <!-- FORMULAIRE 3 -->
-    <form style="border: 2px solid #000; padding: 20px; width: 300px;" action="" method="post"
-        onsubmit="return verifierMotsDePasse()">
+        <br>
 
         <label>Mot de passe :</label><br>
         <input type="password" id="password" required><br><br>
