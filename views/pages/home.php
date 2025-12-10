@@ -50,7 +50,7 @@
 <div class= grid>
         <article>
             <header>
-                <img src= '#' alt='Image '>
+                <img src= "assets/images/logo-payment-cb.svg" alt="Logo CB">
             </header>
             <a href="#"> Voir plus </a>
         </article>
