@@ -26,7 +26,8 @@
 .page-navbar nav{
     display: flex;
     align-items: center;
-    gap:30px;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .page-navbar .btn-panier img{

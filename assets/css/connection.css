@@ -73,4 +73,10 @@ input[type="submit"]:hover {
     background: rgb(222, 184,135);
 }
 
-
+.inscription{
+    color: rgb(186, 146, 108);
+    font-size: 20px;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+}
