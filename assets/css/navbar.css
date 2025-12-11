@@ -7,7 +7,7 @@
     color:rgb(83, 39, 23);
 }
 .page-navbar .img_logo{
-    width:40px;
+    width:50px;
     height:auto;
 }
 .page-navbar strong{
@@ -30,7 +30,7 @@
 }
 
 .page-navbar .btn-panier img{
-    width:20px;
+    width:25px;
     height:auto;
     cursor:pointer;
 }

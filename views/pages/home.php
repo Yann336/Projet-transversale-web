@@ -15,17 +15,17 @@
 <?php foreach ($typelamps as $type) { ?>
 
     <h3> <?= $type["TypeLamp"] ?> </h3>
+        <div class= 'grid'>
 
     <?php foreach ($lamps as $lamp) { ?>
     <?php if ($lamp["TypeLamp"]== $type["TypeLamp"]){
         ?>
-        <div class= 'grid'>
             <article>
                 <header>
                     <img src='<?= $lamp["PathPicture"] ?>' alt='Image random'>
                 </header>
                 <a href="index.php?page=lamp-details"> Voir plus </a>
             </article>
-        </div>
-    <?php }}}?>
+       
+    <?php }}}?> </div>
 
