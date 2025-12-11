@@ -9,13 +9,13 @@
         <a href="index.php?page=Panier" role="button"> Votre Panier </a>
 </section>
 
-<h2 class= 'lampe'> Nos lampes </h2>
+<h2 id="lampes" class= 'lampe'> Nos lampes </h2>
 
 
 <?php foreach ($typelamps as $type) { ?>
 
     <h3> <?= $type["TypeLamp"] ?> </h3>
-        <div class= 'grid'>
+       <div class="grid">
 
     <?php foreach ($lamps as $lamp) { ?>
     <?php if ($lamp["TypeLamp"]== $type["TypeLamp"]){
@@ -26,6 +26,10 @@
                 </header>
                 <a href="index.php?page=lamp-details"> Voir plus </a>
             </article>
-       
-    <?php }}}?> </div>
+        <?php } ?>
+    <?php } ?>
+</div>
+<?php } ?>
+
+    
 
