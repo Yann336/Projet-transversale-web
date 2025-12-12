@@ -1,22 +1,8 @@
-
-    <script>
-        function verifierMotsDePasse() {
-            const mdp1 = document.getElementById("password").value;
-            const mdp2 = document.getElementById("confirm_password").value;
-
-            if (mdp1 !== mdp2) {
-                alert("Les mots de passe ne correspondent pas !");
-                return false;
-            }
-            return true;
-        }
-    </script>
-
+<?php include('models/add.php') ?>
 
     <h1>Inscription</h1>
 
-    <form action="" method="post" onsubmit="return verifierMotsDePasse()">
-        <!-- mettre la page d'acceuil dans action-->
+    <form method="post" >
 
         <label for="Name">Prénom :</label><br>
         <input type="text" id="Name" name="Name" required><br><br>
@@ -41,7 +27,7 @@
         <input type="text" id="PostCode" name="PostCode"
             inputmode="numeric" placeholder="12345" pattern="[0-9]{5}" maxlength="5" required><br><br>
 
-        <label for="Numberphone">Numéro de téléphone :</label>
+        <label for="Numberphone">Numéro de téléphone :</label><br>
         <input type="tel"
             inputmode="numeric"
             id="Numberphone"
@@ -49,14 +35,18 @@
             placeholder="0123456789"
             pattern="0[1-9]([0-9]{2}){4}"
             maxlength="10"
-            required>
+            required><br><br>
 
 
         <label>Mot de passe :</label><br>
-        <input type="password" id="password" required><br><br>
+        <input type="password" name="password" id="password" required><br><br>
 
         <label>Confirmer le mot de passe :</label><br>
-        <input type="password" id="confirm_password" required><br><br>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
 
         <input type="submit" value="Valider">
     </form>
+
+<?php if (!empty($error)){
+    echo "<p>$error</p>";
+} ?>
