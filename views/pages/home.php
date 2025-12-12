@@ -1,11 +1,12 @@
 <?php include('models/lampes.php'); 
 ?>
-<section id = 'hero'>
-    <h1>Clarté Ornée</h1>
+<section id="hero" class="hero" role="region" aria-label="Bannière"> 
+  <div class="hero-inner">
+    <h1>Bienvenue<br>à Clarté Ornée</h1>
+    <p class="lead">Luminaires soigneusement sélectionnés pour sublimer votre intérieur.</p>
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quo sunt architecto saepe adipisci nulla deserunt nihil placeat eius earum ipsa, sint tempora corporis reprehenderit, quia eaque voluptas repellat veniam?</p>
     <div class="hero-buttons">
-        <a href="#" role="button"> Nos lampes </a>
+        <a href="#lampes" role="button"> Nos lampes </a>
         <a href="index.php?page=Panier" role="button"> Votre Panier </a>
 </section>
 
