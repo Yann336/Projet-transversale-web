@@ -8,7 +8,7 @@ CREATE TABLE Lamps(
     name VARCHAR (50) NOT NULL,
     Power VARCHAR (50) NOT NULL,
     Color VARCHAR (50) NOT NULL,
-    Price DECIMAL (5, 2) NOT NULL,
+    Price DECIMAL (6, 2) NOT NULL,
     Style VARCHAR (50) NOT NULL,
     Material VARCHAR (50) NOT NULL,
     Dimensions VARCHAR (50) NOT NULL,
