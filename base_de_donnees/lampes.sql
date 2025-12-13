@@ -5,6 +5,7 @@ USE Clarte_Ornee;
 CREATE TABLE Lamps(
     idLamp INT NOT NULL AUTO_INCREMENT,
     TypeLamp VARCHAR (50) NOT NULL,
+    name VARCHAR (50) NOT NULL,
     Power VARCHAR (50) NOT NULL,
     Color VARCHAR (50) NOT NULL,
     Price DECIMAL (5, 2) NOT NULL,
