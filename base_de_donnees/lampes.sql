@@ -13,7 +13,7 @@ CREATE TABLE Lamps(
     Dimensions VARCHAR (50) NOT NULL,
     Description VARCHAR (1000) NOT NULL,
     Quantity INT(8) NOT NULL,
-    PathPicture VARCHAR(255),
+    PathPicture VARCHAR(255) NOT NULL,
     PRIMARY KEY (idLamp)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -26,8 +26,7 @@ CREATE TABLE Customers(
     City VARCHAR(50) NOT NULL,
     Country VARCHAR(50) NOT NULL,
     PostCode VARCHAR(10) NOT NULL,
-    NumberPhone VARCHAR(12) NOT NULL,
-    password VARCHAR(250) NOT NULL,
+    NumerPhone VARCHAR(12) NOT NULL,
     PRIMARY KEY (idCustomer)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -57,12 +56,9 @@ CREATE TABLE Associates(
     idAssociate INT NOT NULL AUTO_INCREMENT,
     idLamp INT NOT NULL,
     idOrder INT NOT NULL,
+    Quantity INT NOT NULL,
+    PriceBought INT NOT NULL,
     PRIMARY KEY (idAssociate),
     CONSTRAINT fk_AssociateLamp FOREIGN KEY (idLamp) REFERENCES Lamps (idLamp),
     CONSTRAINT fk_AssociateOrder FOREIGN KEY (idOrder) REFERENCES Orders(idOrder)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-INSERT INTO Customers (Name, Lastname, Email, Street, City, Country, PostCode, NumberPhone, password) VALUES
-('John', 'Smith', 'john.smith@example.com', '221B Baker Street', 'London', 'UK', 'NW16XE', '0712345678', 
-'$2y$10$7/nsF2qoBGZjputvPiqx9uMQuTu2izmv2nciEXeJwooY1gVrixrpy'); 
---mdp: sherlock123--
