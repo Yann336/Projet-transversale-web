@@ -14,10 +14,10 @@ body{
 }
 .left{
     flex:0.6;
+    margin:40px;
 }
 .left img{
     display: block;
-    margin: 40px;
 }
 .right{
     flex: 1.4;
