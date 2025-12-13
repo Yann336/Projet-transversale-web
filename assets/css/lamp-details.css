@@ -31,9 +31,10 @@ h1{
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 23px;
     color: rgb(186, 146, 108);
     margin-bottom: 25px;
+    margin: 10px;
 }
 
 img {
