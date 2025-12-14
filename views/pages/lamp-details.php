@@ -29,7 +29,7 @@ if (isset($_POST['addToCart'])) {
         Values (:idLamp , :customer )";
         $query = $db->prepare($sql);
         $query->execute([
-            ':customer' => $idcustomer['idcustomer'],
+            ':customer' => $idcustomer['idCustomer'],
             ':idLamp' => $idLamp
         ]);
     }

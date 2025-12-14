@@ -13,11 +13,11 @@ $price = 0;
         WHERE lamps.idLamp = Baskets.idLamp AND Email = :email" ;
         $query = $db->prepare($sql);
         $query->execute([':email' => $_SESSION['pseudo']]);
-        $baskets = $query->fetch();
+        $baskets = $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
 
-
+var_dump(password_hash(1234, PASSWORD_DEFAULT))
 ?>
 
 
@@ -31,19 +31,19 @@ $price = 0;
 <?php if(!empty($baskets)){
 
     foreach ($baskets as $basket){
-    $price = $price + $basket['price'];
+    $price = $price + $basket['Price'];
     }
 
     foreach ($baskets as $basket) { ?>
             <div class= 'grid'>
                 <article>
                     <header>
-                        <img src='<?= $lamp["PathPicture"] ?>' alt='Image'>
+                        <img src='<?= $basket["PathPicture"] ?>' alt='Image'>
                     </header>
                     <a href="index.php?page=lamp-details&id=<?= $basket['idLamp'] ?>">Voir plus</a>
                 </article>
             </div>
-        <?php }?>
+
 
 
 
@@ -72,7 +72,7 @@ $price = 0;
                 </select>
             </form>
         </div>
-<?php }?>
+<?php } }?>
 
 
         <div class="total-container">
