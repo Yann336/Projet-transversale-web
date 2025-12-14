@@ -1,6 +1,54 @@
+<?php
+
+include('dbConnect.php');
+$price = 0;
+
+    if ($_SESSION['pseudo']== 'toto'){
+        header('Location: index.php?page=connection');
+    }
+    else{
+        $sql = "SELECT * FROM baskets
+        JOIN Lamps ON lamps.idLamp = Baskets.idLamp
+        JOIN customers ON customers.idCustomer = baskets.idCustomer
+        WHERE lamps.idLamp = Baskets.idLamp AND Email = :email" ;
+        $query = $db->prepare($sql);
+        $query->execute([':email' => $_SESSION['pseudo']]);
+        $baskets = $query->fetch();
+    }
+
+
+
+?>
+
+
+
 <section id="Panier">
         <h1>Panier</h1>
         <p>Vendu et expédié par Clarté Ornée</p>
+
+
+
+<?php if(!empty($baskets)){
+
+    foreach ($baskets as $basket){
+    $price = $price + $basket['price'];
+    }
+
+    foreach ($baskets as $basket) { ?>
+            <div class= 'grid'>
+                <article>
+                    <header>
+                        <img src='<?= $lamp["PathPicture"] ?>' alt='Image'>
+                    </header>
+                    <a href="index.php?page=lamp-details&id=<?= $basket['idLamp'] ?>">Voir plus</a>
+                </article>
+            </div>
+        <?php }?>
+
+
+
+
+
 
         <div>
             <button class="btn-delete" aria-label="Supprimer">
@@ -24,9 +72,11 @@
                 </select>
             </form>
         </div>
+<?php }?>
+
 
         <div class="total-container">
-            <span class="label">Total à payer (prix € (php))</span>
+            <span class="label">Total à payer <?= $price?> €</span>
         </div>
 
         <div>
