@@ -1,37 +1,17 @@
 <?php
-
-include('dbConnect.php');
-$price = 0;
-
-    if ($_SESSION['pseudo']== 'toto'){
-        header('Location: index.php?page=connection');
-    }
-    else{
-        $sql = "SELECT * FROM baskets
-        JOIN Lamps ON lamps.idLamp = Baskets.idLamp
-        JOIN customers ON customers.idCustomer = baskets.idCustomer
-        WHERE lamps.idLamp = Baskets.idLamp AND Email = :email" ;
-        $query = $db->prepare($sql);
-        $query->execute([':email' => $_SESSION['pseudo']]);
-        $baskets = $query->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-
-var_dump(password_hash(1234, PASSWORD_DEFAULT))
+include('models/basket.php');
 ?>
-
-
 
 <section id="Panier">
         <h1>Panier</h1>
         <p>Vendu et expédié par Clarté Ornée</p>
 
 
-
 <?php if(!empty($baskets)){
 
     foreach ($baskets as $basket){
     $price = $price + $basket['Price'];
+    $nbarticle = $nbarticle + 1;
     }
 
     foreach ($baskets as $basket) { ?>
@@ -42,12 +22,14 @@ var_dump(password_hash(1234, PASSWORD_DEFAULT))
                     </header>
                     <a href="index.php?page=lamp-details&id=<?= $basket['idLamp'] ?>">Voir plus</a>
                 </article>
+                <form method="post">
+                    <input type="hidden" name="id" value="<?= $basket['idBasket'] ?>">
+                    <input
+                        type="submit"
+                        class="outline secondary"
+                        value="Supprimer"/>
+                </form>
             </div>
-
-
-
-
-
 
 
         <div>
@@ -58,7 +40,7 @@ var_dump(password_hash(1234, PASSWORD_DEFAULT))
         </div>
 
         <div>
-            <form>
+            <form method="post">
                 <label for="quantite">Quantité</label>
                 <select id="quantite" name="quantite">
                     <option value="1">1</option>
@@ -72,7 +54,7 @@ var_dump(password_hash(1234, PASSWORD_DEFAULT))
                 </select>
             </form>
         </div>
-<?php } }?>
+<?php }}?>
 
 
         <div class="total-container">
@@ -80,7 +62,9 @@ var_dump(password_hash(1234, PASSWORD_DEFAULT))
         </div>
 
         <div>
-            <button type="button" class="btn-livraison">CONTINUER VERS LA LIVRAISON</button>
+            <a href="index.php?page=achat">
+                <button type="button" class="btn-livraison">CONTINUER VERS LA LIVRAISON</button>
+            </a>
         </div>
 
         <div id="code-promo">
@@ -98,7 +82,7 @@ var_dump(password_hash(1234, PASSWORD_DEFAULT))
         <h1>Récapitulatif</h1>
 
         <div class="total-commande">
-            <span>commande (nombre article (php))</span>
+            <span> Votre commande contient <?= $nbarticle?> articles </span>
         </div>
 
         <div class="Moyen-paiement">
