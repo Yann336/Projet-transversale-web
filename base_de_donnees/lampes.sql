@@ -1,12 +1,11 @@
-DROP DATABASE IF EXISTS Clarte_Ornee;
-CREATE DATABASE Clarte_Ornee CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE Clarte_Ornee;
+DROP DATABASE IF EXISTS clarte_Ornee;
+CREATE DATABASE clarte_Ornee CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE clarte_Ornee;
 
 CREATE TABLE Lamps(
     name VARCHAR (50) NOT NULL,
     idLamp INT NOT NULL AUTO_INCREMENT,
     TypeLamp VARCHAR (50) NOT NULL,
-    name VARCHAR (50) NOT NULL,
     Power VARCHAR (50) NOT NULL,
     Color VARCHAR (50) NOT NULL,
     Price DECIMAL (6, 2) NOT NULL,
