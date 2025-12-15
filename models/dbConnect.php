@@ -2,9 +2,9 @@
 $dbConfig = [
     'db_sgbd' => 'mysql',
     'db_host' => 'localhost',
-    'db_name' => 'Clarte_Ornee'
-    // 'db_username' => 'root'
-    // 'db_password' => '',
+    'db_name' => 'Clarte_Ornee',
+    'db_username' => 'root',
+    'db_password' => ''
 ];
 
 try {
