@@ -1,5 +1,5 @@
 
-<section id="Panier">
+<section id="Basket">
         <h1>Panier</h1>
         <p>Vendu et expédié par Clarté Ornée</p>
 
@@ -46,7 +46,7 @@
     </section>
 
 
-    <section id="Récapitulatif">
+    <section id="Summary">
         <h1>Récapitulatif</h1>
 
         <div class="total-commande">
