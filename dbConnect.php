@@ -9,13 +9,12 @@ $dbConfig = [
 
 try {
     $db = new PDO(
-        $dbConfig['db_sgbd'] . ":host=" . $dbconfig['db_host'] . ";dbname=" . $dbConfig['db_name'] . ";charset=utf8",
+        $dbConfig['db_sgbd'] . ":host=" . $dbConfig['db_host'] . ";dbname=" . $dbConfig['db_name'] . ";charset=utf8",
         $dbConfig['db_username'],
         $dbConfig['db_password']
     );
 
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 } catch (PDOException $e) {

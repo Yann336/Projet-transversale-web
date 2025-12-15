@@ -1,3 +1,36 @@
+<?php 
+
+include('dbConnect.php');
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
+
+
+    $email = $_SESSION['pseudo']; 
+
+    $sql = "SELECT idCustomer FROM customers WHERE Email = :email LIMIT 1";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([':email' => $email]);
+    $customer = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($customer) {
+
+  
+        $sql = "DELETE FROM baskets WHERE idCustomer = :idCustomer";
+        $stmt = $db->prepare($sql);
+        $stmt->execute([
+            ':idCustomer' => $customer['idCustomer']
+        ]);
+    }
+
+    header('Location: index.php?page=home');
+    exit;
+}
+
+?>
+
+
+
+
 <form>
         <h3>méthode d'expedition</h3>
 
@@ -90,14 +123,15 @@
         <label for="dpd">€9,95 Livré par DPD sous 2 à 4 jours ouvrables</label>
 
 
-    </form>
 
-
-
-
-
-    <form>
         <h4><strong>passez au reglement</strong></h4>
-        <a href="index.php?page=Panier">voici le contenue de votre panier</a> <br> <br>
-        <button>encaissement</button>
+        <a href="index.php?page=Panier">voir le contenue de votre panier</a> <br> <br>
     </form>
+
+    <form method="post" action="index.php?page=achat">
+        <input type="hidden" name="pay" value="1">
+        <input type="submit" class="outline secondary" value="Payer">
+    </form>
+
+
+
