@@ -3,7 +3,6 @@
 <h1>Inscription</h1>
 
 <form method="post">
-
     <label for="Name">Prénom :</label><br>
     <input type="text" id="Name" name="Name" required><br><br>
 
@@ -13,7 +12,6 @@
     <label for="Email">Email :</label><br>
     <input type="email" placeholder="@gmail.com" id="Email" name="Email" required><br><br>
 
-    <br>
     <label for="Street">Adresse :</label><br>
     <input type="text" id="Street" name="Street" required><br><br>
 
@@ -37,7 +35,6 @@
         maxlength="10"
         required><br><br>
 
-
     <label>Mot de passe :</label><br>
     <input type="password" name="password" id="password" required><br><br>
 
@@ -47,6 +44,6 @@
     <input type="submit" value="Valider">
 </form>
 
-<?php if (!empty($error)) {
-    echo "<p>$error</p>";
-} ?>
+<?php if (!empty($error)) { ?>
+    <p><?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?></p>
+<?php } ?>

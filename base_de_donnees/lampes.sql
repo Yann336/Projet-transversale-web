@@ -37,31 +37,8 @@ CREATE TABLE Baskets(
     idBasket INT NOT NULL AUTO_INCREMENT,
     idLamp INT NOT NULL,
     idCustomer INT NOT NULL,
-    Quantity INT(8) NOT NULL,
     PRIMARY KEY (idBasket),
     CONSTRAINT fk_BasketLamp FOREIGN KEY (idLamp) REFERENCES Lamps (idLamp),
     CONSTRAINT fk_BasketCustomer FOREIGN KEY (idCustomer) REFERENCES Customers(idCustomer)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-CREATE TABLE Orders(
-    idOrder INT NOT NULL AUTO_INCREMENT,
-    idBasket INT NOT NULL,
-    idCustomer INT NOT NULL,
-    OrderDate DATE NOT NULL,
-    Quantity INT(8) NOT NULL,
-    Paiement DECIMAL (6, 2),
-    PRIMARY KEY (idOrder),
-    CONSTRAINT fk_OrderBasket FOREIGN KEY (idBasket) REFERENCES Baskets(idBasket),  
-    CONSTRAINT fk_OrderCustomer FOREIGN KEY (idCustomer) REFERENCES Customers(idCustomer)  
-) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-CREATE TABLE Associates(
-    idAssociate INT NOT NULL AUTO_INCREMENT,
-    idLamp INT NOT NULL,
-    idOrder INT NOT NULL,
-    Quantity INT NOT NULL,
-    PriceBought INT NOT NULL,
-    PRIMARY KEY (idAssociate),
-    CONSTRAINT fk_AssociateLamp FOREIGN KEY (idLamp) REFERENCES Lamps (idLamp),
-    CONSTRAINT fk_AssociateOrder FOREIGN KEY (idOrder) REFERENCES Orders(idOrder)
-) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

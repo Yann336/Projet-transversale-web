@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-
-    <form>
+<form>
         <h3>méthode d'expedition</h3>
 
         <label for="Street">Adresse :</label><br>
@@ -26,7 +15,7 @@
             inputmode="numeric" placeholder="12345" pattern="[0-9]{5}" maxlength="5" required><br><br>
 
 
-    </form>
+</form>
 
 
     <!-- <form>
@@ -112,6 +101,3 @@
         <a href="index.php?page=Panier">voici le contenue de votre panier</a> <br> <br>
         <button>encaissement</button>
     </form>
-</body>
-
-</html>

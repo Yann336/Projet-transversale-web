@@ -46,9 +46,10 @@ if (!empty($_POST)) {
                 autocomplete="current-password"/>
             </label>
         </fieldset>
-        <?php if ($feedback != null) {   ?>
-                <p><?= $feedback ?> </p>
+        <?php if (!empty($feedback)) { ?>
+            <p><?= htmlspecialchars($feedback, ENT_QUOTES, 'UTF-8') ?></p>
         <?php } ?>
+
             <input
 			type="submit"
 			value="Se Connecter" />    
