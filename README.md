@@ -129,35 +129,19 @@ phpMyAdmin est utilisé pour gérer la base de données du projet.
 #### **Architecture du projet**
 
 
-
 /PROJET-TRANSVERSALE-WEB
-
 |──assets/
-
 |	└── css/
-
 |	└── images/
-
-|──base\_de\_donnees/
-
+|──base_de_donnees/
  	└──lampes.sql
-
 |──models/
-
 |	└──Lamps/
-
 |──views/
-
 |	└──pages
-
 |	└──partials
-
 |──index.php
-
 |──README.text
-
-
-
 
 
 * assets/ : contenue permettant l'esthétique du site web
