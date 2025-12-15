@@ -25,7 +25,7 @@
                 <header>
                     <img src='<?= $lamp["PathPicture"] ?>' alt='Image random'>
                 </header>
-                <a href="index.php?page=lamp-details&id=<?= $lamp['idLamp'] ?>"> Voir plus </a>
+                <a href="index.php?page=lamp-details&id=<?= $lamp['idLamp'] ?>">Voir plus</a>
             </article>
         <?php } ?>
     <?php } ?>
