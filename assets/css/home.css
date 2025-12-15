@@ -1,5 +1,5 @@
 body{
-    background:rgb(255, 244, 228);
+    background:rgb(247, 223, 191);
     margin:0px;
 }
 h1{
@@ -71,10 +71,11 @@ h2{
     margin-bottom: 20px;
     color: rgb(132, 92, 55) ;
     text-decoration: underline;
+    font-size: 40px;
 }
 h3{
     color: rgb(83, 39, 23);
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .grid{
@@ -94,17 +95,20 @@ h3{
     
 }
 
-.grid a{
-    padding: 5px 10px ;
-    background-color: black;
-    color:white;
-    border-radius: 40px;
-    text-decoration: none;
-}
-
 img{
     height:200px;
     width:auto;
     margin: 20px;
+    border-radius: 8%;
+}
 
+img:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 576px){
+    .hero .lead {
+  color: white;
+}
 }

@@ -2,46 +2,35 @@
 include('models/basket.php');
 ?>
 
-<section id="Panier">
+<section id="Basket">
         <h1>Panier</h1>
         <p>Vendu et expédié par Clarté Ornée</p>
 
 
-<?php if(!empty($baskets)){
+<?php if(!empty($baskets)){?>
 
-    foreach ($baskets as $basket){
-    $price = $price + $basket['Price'];
-    $nbarticle = $nbarticle + 1;
-    }
-
-    foreach ($baskets as $basket) { ?>
             <div class= 'grid'>
-                <article>
-                    <header>
-                        <div class="article">
-                        <img src='<?= $basket["PathPicture"] ?>' alt='Image'>
-                        </div>
-                    </header>
-                    <a href="index.php?page=lamp-details&id=<?= $basket['idLamp'] ?>">Voir plus</a>
-                </article>
-                <form method="post">
-                    <input type="hidden" name="id" value="<?= $basket['idBasket'] ?>">
-                    <input
-                        type="submit"
-                        class="outline secondary"
-                        value="Supprimer"/>
-                </form>
-            </div>
-
-
-        <div>
-            <button class="btn-delete" aria-label="Supprimer">
+                <?php foreach ($baskets as $basket){
+                    $price = $price + $basket['Price'];
+                    $nbarticle = $nbarticle + 1;
+                    ?>
+                <article class="product-card">
+                        <img class="img_lamp" src='<?= $basket["PathPicture"] ?>' alt='Image'>
+                <div class="actions" >   
+                    <button type="submit" class="button" >
+                     
+                    <a href="index.php?page=lamp-details&id=<?= $basket['idLamp'] ?>">Voir plus</a></button>
                 
-                <img src="assets/images/poubelle.png" alt="Logo corbeille" width="50">
-            </button>
+                <form method="post">
+                    <button type="submit"class="btn-delete" name="id" value="<?= $basket['idBasket'] ?>" aria-label="Supprimer">    
+                    <img src="assets/images/poubelle.png" alt="Logo corbeille" width="50">
+                    </button>
+                </form>
+                   </div>
+                </article>
+            <?php }?>
         </div>
-
-<?php }}?>
+<?php }?>
 
 
         <div class="total-container">
@@ -65,7 +54,7 @@ include('models/basket.php');
     </section>
 
 
-    <section id="Récapitulatif">
+    <section id="Summary">
         <h1>Récapitulatif</h1>
 
         <div class="total-commande">

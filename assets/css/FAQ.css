@@ -5,7 +5,7 @@ body{
 
 h1 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     color: rgb(186, 146, 108);
     font-size: 30px;
 }
@@ -22,4 +22,36 @@ section p strong{
 section p {
     font-size: 18px;
     line-height: 1.6;
+}
+
+@media (max-width: 992px){
+    h1{
+        font-size: 26px;
+    }
+
+    section p strong{
+        font-size: 22px;
+    }
+
+    section p{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 576px){
+    h1{
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    section{
+        margin: 12px;
+    }
+
+    section p strong{
+        font-size: 20px;
+    }
+
+    section p{
+        font-size: 16px;
+    }
 }
