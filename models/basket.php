@@ -4,7 +4,7 @@ $price = 0;
 $nbarticle = 0;
 
 if (empty($_SESSION['pseudo'])){
-    header('Location: index.php?page=connection');
+    header('Location: index.php?page=login');
 }
 else{
     $sql = "SELECT * FROM baskets

@@ -1,6 +1,6 @@
 <?php 
 $connect = 'Se connecter';
-$etatco = 'connection';
+$etatco = 'login';
 if (!empty($_SESSION['authenticated'])){
     if ($_SESSION['authenticated']){
         $connect= 'Se déconnecter';

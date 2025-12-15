@@ -8,8 +8,8 @@ if (!$id) {
 
 if (isset($_POST['addToCart'])) {
 
-    if ($_SESSION['pseudo'] == 'toto') {
-        header('Location: index.php?page=login');
+    if ($_SESSION['pseudo']) {
+        header('Location: index.php?page=inscription');
         exit;
     }
 
