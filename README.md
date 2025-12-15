@@ -130,7 +130,7 @@ phpMyAdmin est utilisé pour gérer la base de données du projet.
 
 
 /PROJET-TRANSVERSALE-WEB
-|──assets/
+|──assets/ <br>
 |	└── css/
 |	└── images/
 |──base_de_donnees/
