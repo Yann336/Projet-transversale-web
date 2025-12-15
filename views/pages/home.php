@@ -23,7 +23,7 @@
         ?>
             <article>
                 <header><a href="index.php?page=lamp-details&id=<?= $lamp['idLamp'] ?>">
-                    <img src='<?= $lamp["PathPicture"] ?>' alt='Image lampe'></a>
+                    <img class="img_lamp"src='<?= $lamp["PathPicture"] ?>' alt='Image lampe'></a>
                 </header>
                 
             </article>
