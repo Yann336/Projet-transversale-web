@@ -24,7 +24,7 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
     $stmt->execute([
         ':id' => $_POST['id']
     ]);
-    header('Location: index.php?page=Panier');
+    header('Location: index.php?page=basket');
 }
 
 ?>

@@ -9,7 +9,7 @@ if (!$id) {
 if (isset($_POST['addToCart'])) {
 
     if ($_SESSION['pseudo'] == 'toto') {
-        header('Location: index.php?page=connection');
+        header('Location: index.php?page=login');
         exit;
     }
 

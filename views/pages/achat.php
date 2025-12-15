@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
 
         <h4><strong>passez au reglement</strong></h4>
 
-        <a href="index.php?page=Panier">voir le contenue de votre panier</a> <br> <br>
+        <a href="index.php?page=basket">voir le contenue de votre panier</a> <br> <br>
     
 
     

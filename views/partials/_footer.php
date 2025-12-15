@@ -4,7 +4,7 @@
     <a href="index.php?page=contact"> Contact </a>
     <a href="index.php?page=FAQ"> FAQ </a>
     <a href="index.php?page=legal_disclaimer"> Mentions Légales </a>
-    <a href="index.php?page=SAV"> SAV </a>
+    <a href="index.php?page=customers-services"> SAV </a>
     <a href="index.php?page=about"> Notre entreprise </a>
 </div>
 </footer>

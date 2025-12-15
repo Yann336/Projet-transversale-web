@@ -6,7 +6,7 @@
 
     <div class="hero-buttons">
         <a href="#lampes" role="button"> Nos lampes </a>
-        <a href="index.php?page=Panier" role="button"> Votre Panier </a>
+        <a href="index.php?page=basket" role="button"> Votre Panier </a>
     </div>
 </section>
 
