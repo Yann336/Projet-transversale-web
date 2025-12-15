@@ -1,32 +1,31 @@
 <?php
 
-include('dbConnect.php');
+include('models/dbConnect.php');
 
-$sql = "SELECT * FROM Lamps";
-$query = $db->query($sql);
-$lamps = $query->fetchall();
+$stmt = $db->prepare("SELECT * FROM Lamps");
+$stmt->execute();
+$lamps = $stmt->fetchall(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM Customers";
-$query = $db->query($sql);
-$customers = $query->fetchall();
+$stmt = $db->prepare("SELECT * FROM Customers");
+$stmt->execute();
+$lamps = $stmt->fetchall(PDO::FETCH_ASSOC);
 
+$stmt = $db->prepare("SELECT * FROM Baskets");
+$stmt->execute();
+$lamps = $stmt->fetchall(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM Baskets";
-$query = $db->query($sql);
-$basket = $query->fetchall();
+$stmt = $db->prepare("SELECT * FROM Orders");
+$stmt->execute();
+$lamps = $stmt->fetchall(PDO::FETCH_ASSOC);
 
-
-$sql = "SELECT * FROM Orders";
-$query = $db->query($sql);
-$orders = $query->fetchall();
-
-$sql = "SELECT * FROM Associates";
-$query = $db->query($sql);
-$associate = $query->fetchall();
-
+$stmt = $db->prepare("SELECT * FROM Associates");
+$stmt->execute();
+$lamps = $stmt->fetchall(PDO::FETCH_ASSOC);
 
 $sql = "SELECT DISTINCT TypeLamp FROM Lamps";
-$query = $db->query($sql);
-$typelamps = $query->fetchall();
+$stmt = $db->prepare($sql);
+$stmt->execute();
+$typelamps = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 
 ?>
