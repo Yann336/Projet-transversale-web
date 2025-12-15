@@ -9,6 +9,10 @@ body {
     background: rgb(255, 244, 228) ;
 }
 
+.promotion{
+    color: red;
+}
+
 #Basket{
     margin: 20px;
 }

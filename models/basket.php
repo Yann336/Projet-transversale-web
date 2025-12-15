@@ -3,7 +3,7 @@ include('dbConnect.php');
 $price = 0;
 $nbarticle = 0;
 
-if ($_SESSION['pseudo']== 'toto'){
+if (empty($_SESSION['pseudo'])){
     header('Location: index.php?page=connection');
 }
 else{

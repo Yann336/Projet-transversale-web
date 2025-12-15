@@ -1,5 +1,13 @@
 <?php
 include('models/basket.php');
+
+$promo = 0;
+
+if(isset($_POST['promo']) && $_POST['promo'] == 'EPSI'){
+    $message = 'Remise de 50%';
+    $promo = 0.5;
+}
+
 ?>
 
 <section id="Basket">
@@ -37,8 +45,16 @@ include('models/basket.php');
         </div>
     <?php } ?>
 
+
+    
     <div class="total-container">
-        <span class="label">Total à payer <?= number_format($price, 2, ',', ' ') ?> €</span>
+        <span class="label">Total à payer <?= number_format($price, 2, ',', ' ') ?> €</span> 
+
+        <?php if ($promo!=0){ ?>
+            <p class = "promotion"><?= $message ?></p>
+            <?php $promo = $price * $promo; ?>
+            <span class="label">Nouveau prix <?= number_format($promo, 2, ',', ' ')  ?> €</span>
+        <?php } ?>
     </div>
 
     <div>

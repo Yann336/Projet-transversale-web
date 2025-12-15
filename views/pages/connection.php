@@ -1,5 +1,4 @@
 <?php
-$_SESSION['pseudo'] = 'toto';
 
 include('models/lampes.php');
  
