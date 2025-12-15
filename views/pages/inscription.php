@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
+    <link rel="stylesheet" href="../../assets/css/inscription.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 
     <script>
@@ -22,9 +23,8 @@
 </head>
 
 <body>
-    <h1>Inscription</h1>
 
-    <form action="" method="post" onsubmit="return verifierMotsDePasse()">
+    <form action="#" method="post" class="registration" onsubmit="return verifierMotsDePasse()">
         <!-- mettre la page d'acceuil dans action-->
 
         <label for="Name">Prénom :</label><br>
@@ -50,7 +50,7 @@
         <input type="text" id="PostCode" name="PostCode"
             inputmode="numeric" placeholder="12345" pattern="[0-9]{5}" maxlength="5" required><br><br>
 
-        <label for="Numberphone">Numéro de téléphone :</label>
+        <label for="Numberphone">Numéro de téléphone :</label><br>
         <input type="tel"
             inputmode="numeric"
             id="Numberphone"
@@ -58,7 +58,7 @@
             placeholder="0123456789"
             pattern="0[1-9]([0-9]{2}){4}"
             maxlength="10"
-            required>
+            required><br><br>
 
 
         <label>Mot de passe :</label><br>

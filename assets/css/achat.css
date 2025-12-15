@@ -1,0 +1,29 @@
+.delivery_method {
+    border: 2px solid #000;
+    display: inline-block;
+    inline-size: 300px;
+    align-items: center;
+}
+
+.payment_method {
+    border: 2px solid #000;
+    display: inline-block;
+    inline-size: 300px;
+    align-items: center;
+}
+
+.payment {
+    border: 2px solid #000;
+    display: inline-block;
+    inline-size: 300px;
+    align-items: center;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
