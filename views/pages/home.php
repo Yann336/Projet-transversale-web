@@ -1,5 +1,4 @@
-<?php include('models/lampes.php'); 
-?>
+<?php include('models/lampes.php'); ?>
 <section id="hero" class="hero" role="region" aria-label="Bannière"> 
   <div class="hero-inner">
     <h1>Bienvenue<br>à Clarté Ornée</h1>
@@ -8,29 +7,26 @@
     <div class="hero-buttons">
         <a href="#lampes" role="button"> Nos lampes </a>
         <a href="index.php?page=Panier" role="button"> Votre Panier </a>
+    </div>
 </section>
 
-<h2 id="lampes" class= 'lampe'> Nos lampes </h2>
-
+<h2 id="lampes" class="lampe"> Nos lampes </h2>
 
 <?php foreach ($typelamps as $type) { ?>
 
-    <h3> <?= $type["TypeLamp"] ?> </h3>
-       <div class="grid">
+    <h3><?= htmlspecialchars($type["TypeLamp"], ENT_QUOTES, 'UTF-8') ?></h3>
+    <div class="grid">
 
     <?php foreach ($lamps as $lamp) { ?>
-    <?php if ($lamp["TypeLamp"]== $type["TypeLamp"]){
-        ?>
+        <?php if ($lamp["TypeLamp"] == $type["TypeLamp"]) { ?>
             <article>
-                <header><a href="index.php?page=lamp-details&id=<?= $lamp['idLamp'] ?>">
-                    <img src='<?= $lamp["PathPicture"] ?>' alt='Image lampe'></a>
+                <header><a href="index.php?page=lamp-details&id=<?= htmlspecialchars($lamp['idLamp'], ENT_QUOTES, 'UTF-8') ?>">
+                    <img src='<?= htmlspecialchars($lamp["PathPicture"], ENT_QUOTES, 'UTF-8') ?>' alt='Image lampe'></a>
                 </header>
                 
             </article>
         <?php } ?>
     <?php } ?>
-</div>
+
+    </div>
 <?php } ?>
-
-    
-

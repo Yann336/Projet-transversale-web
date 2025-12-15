@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS Clarte_Ornee;
-CREATE DATABASE Clarte_Ornee CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE Clarte_Ornee;
+DROP DATABASE IF EXISTS clarte_Ornee;
+CREATE DATABASE clarte_Ornee CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE clarte_Ornee;
 
 CREATE TABLE Lamps(
     name VARCHAR (50) NOT NULL,
@@ -36,27 +36,16 @@ CREATE TABLE Baskets(
     idBasket INT NOT NULL AUTO_INCREMENT,
     idLamp INT NOT NULL,
     idCustomer INT NOT NULL,
-    Quantity INT(8) NOT NULL,
     PRIMARY KEY (idBasket),
     CONSTRAINT fk_BasketLamp FOREIGN KEY (idLamp) REFERENCES Lamps (idLamp),
     CONSTRAINT fk_BasketCustomer FOREIGN KEY (idCustomer) REFERENCES Customers(idCustomer)
-) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-CREATE TABLE Associates(
-    idAssociate INT NOT NULL AUTO_INCREMENT,
-    idLamp INT NOT NULL,
-    idOrder INT NOT NULL,
-    Quantity INT NOT NULL,
-    PriceBought INT NOT NULL,
-    PRIMARY KEY (idAssociate),
-    CONSTRAINT fk_AssociateLamp FOREIGN KEY (idLamp) REFERENCES Lamps (idLamp)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE CustomerService(
     idCustomerService INT NOT NULL AUTO_INCREMENT,
     idCustomer INT NOT NULL,
     Request VARCHAR(1000) NULL,
-    OrderNumber INT NOT NULL,
+    OrderNumber INT,
     PRIMARY KEY (idCustomerService),
     CONSTRAINT fk_CustomerService_Customers FOREIGN KEY (idCustomer) REFERENCES Customers(idCustomer)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

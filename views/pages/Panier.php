@@ -6,6 +6,7 @@ include('models/basket.php');
         <h1>Panier</h1>
         <p>Vendu et expédié par Clarté Ornée</p>
 
+<?php if (!empty($baskets)) {
 
 <?php if(!empty($baskets)){?>
 
