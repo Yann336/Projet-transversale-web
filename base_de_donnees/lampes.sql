@@ -54,8 +54,9 @@ CREATE TABLE Associates(
 
 CREATE TABLE CustomerService(
     idCustomerService INT NOT NULL AUTO_INCREMENT,
+    idCustomer INT NOT NULL,
     Request VARCHAR(1000) NULL,
     OrderNumber INT NOT NULL,
     PRIMARY KEY (idCustomerService),
-    CONSTRAINT fk_CustomerService-Customers FOREIGN KEY (idCustomer) REFERENCES Customers(idCustomer)
+    CONSTRAINT fk_CustomerService_Customers FOREIGN KEY (idCustomer) REFERENCES Customers(idCustomer)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
