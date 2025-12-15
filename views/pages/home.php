@@ -1,30 +1,36 @@
 <?php include('models/lampes.php'); 
 ?>
-<section id = 'hero'>
-    <h1>Clarté Ornée</h1>
+<section id="hero" class="hero" role="region" aria-label="Bannière"> 
+  <div class="hero-inner">
+    <h1>Bienvenue<br>à Clarté Ornée</h1>
+    <p class="lead">Luminaires soigneusement sélectionnés pour sublimer votre intérieur.</p>
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quo sunt architecto saepe adipisci nulla deserunt nihil placeat eius earum ipsa, sint tempora corporis reprehenderit, quia eaque voluptas repellat veniam?</p>
-        <a href="#" role="button"> Nos lampes </a>
+    <div class="hero-buttons">
+        <a href="#lampes" role="button"> Nos lampes </a>
         <a href="index.php?page=Panier" role="button"> Votre Panier </a>
 </section>
 
-<h2 class= 'lampe'> Nos lampes </h2>
+<h2 id="lampes" class= 'lampe'> Nos lampes </h2>
 
 
 <?php foreach ($typelamps as $type) { ?>
 
     <h3> <?= $type["TypeLamp"] ?> </h3>
+       <div class="grid">
 
     <?php foreach ($lamps as $lamp) { ?>
     <?php if ($lamp["TypeLamp"]== $type["TypeLamp"]){
         ?>
-        <div class= 'grid'>
             <article>
                 <header>
                     <img src='<?= $lamp["PathPicture"] ?>' alt='Image random'>
                 </header>
                 <a href="index.php?page=lamp-details&id=<?= $lamp['idLamp'] ?>">Voir plus</a>
             </article>
-        </div>
-    <?php }}}?>
+        <?php } ?>
+    <?php } ?>
+</div>
+<?php } ?>
+
+    
 

@@ -18,7 +18,9 @@ include('models/basket.php');
             <div class= 'grid'>
                 <article>
                     <header>
+                        <div class="article">
                         <img src='<?= $basket["PathPicture"] ?>' alt='Image'>
+                        </div>
                     </header>
                     <a href="index.php?page=lamp-details&id=<?= $basket['idLamp'] ?>">Voir plus</a>
                 </article>
@@ -34,8 +36,8 @@ include('models/basket.php');
 
         <div>
             <button class="btn-delete" aria-label="Supprimer">
-                <p>image article (php)</p>
-                <img src="Photos/téléchargement.jpg" alt="Logo corbeille" width="50">
+                
+                <img src="assets/images/poubelle.png" alt="Logo corbeille" width="50">
             </button>
         </div>
 
@@ -90,18 +92,17 @@ include('models/basket.php');
         </div>
 
         <div class="paiements">
-            <img src="Photos/logo-payment-cb.svg" alt="Logo CB" width="30">
-            <img src="Photos/logo-payment-visa.svg" alt="Logo Visa" width="30">
-            <img src="Photos/logo-payment-cbMasterGl.svg" alt="Logo CB Master" width="30">
-            <img src="Photos/logo-payment-cbThousandOneList.svg" alt="Logo CB ThousandOne" width="30">
-            <img src="Photos/logo-payment-mastercard.svg" alt="Logo mastercard" width="30">
-            <img src="Photos/logo-payment-applePay.svg" alt="Logo Apple Pay" width="30">
-            <img src="Photos/logo-payment-amex.svg" alt="Logo Amex" width="30">
-            <img src="Photos/logo-payment-paypal.svg" alt="Logo Paypal" width="60">
-            <img src="Photos/logo-payment-floa3x4x.svg" alt="Logo Floa" width="60">
-            <img src="Photos/logo-payment-giftcard.svg" alt="Carte cadeau" width="60">
-            <img src="Photos/logo-payment-loyaltyVouchers.svg" alt="Bons d'achat" width="60">
+            <img src="assets/images/logo-payment-cb.svg" alt="Logo CB" width="30">
+            <img src="assets/images/logo-payment-visa.svg" alt="Logo Visa" width="30">
+            <img src="assets/images/logo-payment-cbMasterGl.svg" alt="Logo CB Master" width="30">
+            <img src="assets/images/logo-payment-cbThousandOneList.svg" alt="Logo CB ThousandOne" width="30">
+            <img src="assets/images/logo-payment-mastercard.svg" alt="Logo mastercard" width="30">
+            <img src="assets/images/logo-payment-applePay.svg" alt="Logo Apple Pay" width="30">
+            <img src="assets/images/logo-payment-amex.svg" alt="Logo Amex" width="30">
+            <img src="assets/images/logo-payment-paypal.svg" alt="Logo Paypal" width="60">
+            <img src="assets/images/logo-payment-floa3x4x.svg" alt="Logo Floa" width="60">
+            <img src="assets/images/logo-payment-giftcard.svg" alt="Carte cadeau" width="60">
+            <img src="assets/images/logo-payment-loyaltyVouchers.svg" alt="Bons d'achat" width="60">
         </div>
     </section>
-
 
