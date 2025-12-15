@@ -32,9 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['send'])) {
 
     <form method=post> 
 
-        <label for="description">veuillez décrire votre probleme :</label><br>
-        <textarea name="message" id = "message" rows="10" cols="30" required>
-        </textarea><br><br>
+        <label for="description" >Veuillez décrire votre probleme :</label><br>
+        <textarea name="message" id="message" rows="10" cols="30" required></textarea>
+        <br><br>
 
 
         <label for="numorder">Numéro de commande</label><br>
