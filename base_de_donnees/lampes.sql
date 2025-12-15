@@ -27,7 +27,8 @@ CREATE TABLE Customers(
     City VARCHAR(50) NOT NULL,
     Country VARCHAR(50) NOT NULL,
     PostCode VARCHAR(10) NOT NULL,
-    NumerPhone VARCHAR(12) NOT NULL,
+    NumberPhone VARCHAR(12) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     PRIMARY KEY (idCustomer)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
