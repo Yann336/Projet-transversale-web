@@ -1,38 +1,57 @@
+<?php
+include('models/basket.php');
+?>
 
 <section id="Basket">
         <h1>Panier</h1>
         <p>Vendu et expédié par Clarté Ornée</p>
 
-        <div class="article">
-            <p>image article (php)</p>
+
+<?php if(!empty($baskets)){
+
+    foreach ($baskets as $basket){
+    $price = $price + $basket['Price'];
+    $nbarticle = $nbarticle + 1;
+    }
+
+    foreach ($baskets as $basket) { ?>
+            <div class= 'grid'>
+                <article>
+                    <header>
+                        <div class="article">
+                        <img src='<?= $basket["PathPicture"] ?>' alt='Image'>
+                        </div>
+                    </header>
+                    <a href="index.php?page=lamp-details&id=<?= $basket['idLamp'] ?>">Voir plus</a>
+                </article>
+                <form method="post">
+                    <input type="hidden" name="id" value="<?= $basket['idBasket'] ?>">
+                    <input
+                        type="submit"
+                        class="outline secondary"
+                        value="Supprimer"/>
+                </form>
+            </div>
+
+
+        <div>
             <button class="btn-delete" aria-label="Supprimer">
                 
                 <img src="assets/images/poubelle.png" alt="Logo corbeille" width="50">
             </button>
         </div>
 
-        <div>
-            <form>
-                <label for="quantite">Quantité</label>
-                <select id="quantite" name="quantite">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                </select>
-            </form>
-        </div>
+<?php }}?>
+
 
         <div class="total-container">
-            <span>Total à payer (prix € (php))</span>
+            <span class="label">Total à payer <?= $price?> €</span>
         </div>
 
         <div>
-            <button type="button" class="btn-livraison">CONTINUER VERS LA LIVRAISON</button>
+            <a href="index.php?page=achat">
+                <button type="button" class="btn-livraison">CONTINUER VERS LA LIVRAISON</button>
+            </a>
         </div>
 
         <div id="code-promo">
@@ -50,7 +69,7 @@
         <h1>Récapitulatif</h1>
 
         <div class="total-commande">
-            <span>commande (nombre article (php))</span>
+            <span> Votre commande contient <?=$nbarticle?> articles </span>
         </div>
 
         <div class="Moyen-paiement">

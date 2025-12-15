@@ -1,5 +1,6 @@
 <?php
 $_SESSION['pseudo'] = 'toto';
+
 include('models/lampes.php');
  
 $feedback = "";
@@ -13,6 +14,7 @@ if (!empty($_POST)) {
         if ($_POST["email"] == $user["Email"] &&
             password_verify($_POST["password"], $user["password"])) { 
             $_SESSION['authenticated'] = true;
+            $_SESSION['pseudo'] = $user["Email"];
             header('Location: index.php?page=home');
             exit;
         }
@@ -50,6 +52,6 @@ if (!empty($_POST)) {
             <input
 			type="submit"
 			value="Se Connecter" />    
-        <a class="inscription" href="views/pages/inscription.php">Inscription</a>      
+        <a class="inscription" href="index.php?page=inscription">Inscription</a>      
     </form>
 </section>
