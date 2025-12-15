@@ -64,3 +64,10 @@ CREATE TABLE Associates(
     CONSTRAINT fk_AssociateLamp FOREIGN KEY (idLamp) REFERENCES Lamps (idLamp),
     CONSTRAINT fk_AssociateOrder FOREIGN KEY (idOrder) REFERENCES Orders(idOrder)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE CustomerService(
+    idCustomerService INT NOT NULL AUTO_INCREMENT,
+    Request VARCHAR(1000) NULL,
+    OrderNumber INT NOT NULL,
+    PRIMARY KEY (idAssociate)
+) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
