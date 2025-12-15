@@ -22,10 +22,10 @@
     <?php if ($lamp["TypeLamp"]== $type["TypeLamp"]){
         ?>
             <article>
-                <header>
-                    <img src='<?= $lamp["PathPicture"] ?>' alt='Image random'>
+                <header><a href="index.php?page=lamp-details&id=<?= $lamp['idLamp'] ?>">
+                    <img src='<?= $lamp["PathPicture"] ?>' alt='Image lampe'></a>
                 </header>
-                <a href="index.php?page=lamp-details&id=<?= $lamp['idLamp'] ?>">Voir plus</a>
+                
             </article>
         <?php } ?>
     <?php } ?>
