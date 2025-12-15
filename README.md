@@ -130,18 +130,18 @@ phpMyAdmin est utilisé pour gérer la base de données du projet.
 
 
 /PROJET-TRANSVERSALE-WEB
-|──assets/ <br>
-|	└── css/
-|	└── images/
-|──base_de_donnees/
- 	└──lampes.sql
-|──models/
-|	└──Lamps/
-|──views/
-|	└──pages
-|	└──partials
-|──index.php
-|──README.text
+<br>|──assets/
+<br>|	└── css/
+<br>|	└── images/
+<br>|──base_de_donnees/
+<br>| 	└──lampes.sql
+<br>|──models/
+<br>|	└──Lamps/
+<br>|──views/
+<br>|	└──pages/
+<br>|	└──partials/
+<br>|──index.php
+<br>|──README.text
 
 
 * assets/ : contenue permettant l'esthétique du site web
