@@ -7,7 +7,7 @@ body{
     background: white;
     padding: 10px;
     border-radius: 8px;
-    margin: 30px;
+    margin: 60px;
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -51,14 +51,14 @@ img {
     font-size: 20px;
 }
 
-.prix{
+.price{
     font-size: 28px;
     font-weight: 600;
     margin: 10px;
-    color: #000;
+    color: black;
 }
 
-.bouton{
+.button{
     display: inline-block;
     padding: 16px 36px;
     font-size: 16px;
@@ -69,6 +69,83 @@ img {
     color:white;
 }
 
-.bouton:hover {
+.button:hover {
     color:rgb(83, 39, 23);
+}
+
+@media(max-width: 1024px) {
+    .product {
+        gap: 15px;
+        width: 80%;
+        margin: 120px;
+    }
+
+    .left {
+        margin: 20px;
+        flex: 1;
+    }
+
+    .right {
+        margin-top: 60px;
+        flex: 1;
+    }
+
+    img {
+        height: 280px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .description, .attributs {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 30px;
+    }
+
+    .left {
+        margin: 0;
+    }
+
+    .right {
+        margin-top: 20px;
+    }
+
+    img {
+        height: 220px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .description, .attributs {
+        font-size: 16px;
+    }
+
+    .prix {
+        font-size: 22px;
+    }
+
+    .bouton {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto 0;
+    }
 }

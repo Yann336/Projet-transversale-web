@@ -20,14 +20,10 @@
     <?php foreach ($lamps as $lamp) { ?>
         <?php if ($lamp["TypeLamp"] == $type["TypeLamp"]) { ?>
             <article>
-                <header>
-                    <img 
-                        src="<?= htmlspecialchars($lamp["PathPicture"], ENT_QUOTES, 'UTF-8') ?>" 
-                        alt="Image lampe">
+                <header><a href="index.php?page=lamp-details&id=<?= htmlspecialchars($lamp['idLamp'], ENT_QUOTES, 'UTF-8') ?>">
+                    <img src='<?= htmlspecialchars($lamp["PathPicture"], ENT_QUOTES, 'UTF-8') ?>' alt='Image lampe'></a>
                 </header>
-                <a href="index.php?page=lamp-details&id=<?= htmlspecialchars($lamp['idLamp'], ENT_QUOTES, 'UTF-8') ?>">
-                    Voir plus
-                </a>
+                
             </article>
         <?php } ?>
     <?php } ?>

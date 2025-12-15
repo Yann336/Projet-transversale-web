@@ -56,13 +56,13 @@ if (isset($_POST['addToCart'])) {
             <?= htmlspecialchars($lamps["Description"], ENT_QUOTES, 'UTF-8') ?>
         </p>
 
-        <p class="prix">
+        <p class="price">
             Prix : <?= htmlspecialchars($lamps["Price"], ENT_QUOTES, 'UTF-8') ?>
         </p>
 
         <form method="POST">
             <input type="hidden" name="idLamp" value="<?= htmlspecialchars($id, ENT_QUOTES, 'UTF-8') ?>">
-            <button type="submit" name="addToCart">Ajouter au panier</button>
+            <button type="submit" class="button" name="addToCart">Ajouter au panier</button>
         </form>
     </div>
 </section>

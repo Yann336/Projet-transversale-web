@@ -9,10 +9,10 @@ body {
     background: rgb(255, 244, 228) ;
 }
 
-#Panier {
+#Basket{
     margin: 20px;
 }
-#Récapitulatif{
+#Summary{
     margin: 20px;
 }
 section {
@@ -30,15 +30,26 @@ h1 {
     color: rgb(186, 146, 108);
 }
 
-#Panier p {
+#Basket p {
     margin-bottom: 10px;
     font-size: 15px;
 }
+.grid { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
 
-.article{
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap:15px;
 }
 
 .btn-delete {
@@ -48,15 +59,15 @@ h1 {
 }
 
 .btn-delete img {
-    width: 30px;
+    width: 45px;
     height: auto;
 }
 
-#Panier form {
+#Basket form {
     margin: 20px 0;
 }
 
-#Panier label {
+#Basket label {
     font-size: 15px;
 }
 
@@ -132,5 +143,126 @@ h1 {
 
 .paiements img {
     height: auto;
-    width: 40px;
+    width: 60px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.button{
+    display: inline-block;
+    padding: 16px 36px;
+    font-size: 18px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    background-color: rgb(186, 146, 108);
+    
+}
+
+.button a:hover {
+    color:rgb(83, 39, 23);
+}
+
+.img_lamp{
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width:300px
+}
+
+@media (max-width: 1024px) {
+
+    #Basket, #Summary {
+        margin: 30px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .article {
+        gap: 8px;
+    }
+
+    #Basket p {
+        font-size: 14px;
+    }
+
+    .total-container {
+        font-size: 18px;
+    }
+
+    .btn-livraison {
+        font-size: 15px;
+        padding: 14px;
+    }
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    #Basket, #Summary {
+        margin: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .article {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .btn-delete img {
+        width: 24px;
+    }
+
+    #quantite {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .btn-livraison {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    #code-promo {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #code-promo input {
+        width: 100%;
+    }
+
+    #code-promo button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .paiements {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .paiements img {
+        width: 36px;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+    }
 }
