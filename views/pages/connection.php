@@ -52,6 +52,6 @@ if (!empty($_POST)) {
             <input
 			type="submit"
 			value="Se Connecter" />    
-        <a class="inscription" href="views/pages/inscription.php">Inscription</a>      
+        <a class="inscription" href="index.php?page=inscription">Inscription</a>      
     </form>
 </section>

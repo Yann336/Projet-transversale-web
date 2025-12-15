@@ -4,8 +4,6 @@ include('models/select-details.php');
 $id= $_GET['id'];
 
 
-
-
 if (isset($_POST['addToCart'])) {
 
     if ($_SESSION['pseudo']== 'toto'){

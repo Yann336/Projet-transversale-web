@@ -41,21 +41,6 @@ include('models/basket.php');
             </button>
         </div>
 
-        <div>
-            <form method="post">
-                <label for="quantite">Quantité</label>
-                <select id="quantite" name="quantite">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                </select>
-            </form>
-        </div>
 <?php }}?>
 
 
@@ -84,7 +69,7 @@ include('models/basket.php');
         <h1>Récapitulatif</h1>
 
         <div class="total-commande">
-            <span> Votre commande contient <?= $nbarticle?> articles </span>
+            <span> Votre commande contient <?=$nbarticle?> articles </span>
         </div>
 
         <div class="Moyen-paiement">
