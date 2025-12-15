@@ -62,16 +62,11 @@ if (isset($_POST['addToCart'])) {
 
 <p class="price"> Prix : <?= $lamps["Price"] ?> </p>
 
-<p> Price : <?= $lamps["Price"] ?> </p>
+
 
 <form method="POST">
     <input type="hidden" name="idLamp" value="<?= $_GET['id'] ?>">
-    <button type="submit" name="addToCart">Ajouter au panier</button>
+    <button type="submit" class="button" name="addToCart">Ajouter au panier</button>
 </form>
-
-        <form method="POST">
-            <input type="hidden" name="idLamp" value="<?= $_GET['id'] ?>">
-            <button class="button" type="submit">Ajouter au panier</button>
-        </form>
     </div>
 </section>

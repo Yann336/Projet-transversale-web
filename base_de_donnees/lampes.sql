@@ -6,7 +6,6 @@ CREATE TABLE Lamps(
     name VARCHAR (50) NOT NULL,
     idLamp INT NOT NULL AUTO_INCREMENT,
     TypeLamp VARCHAR (50) NOT NULL,
-    name VARCHAR (50) NOT NULL,
     Power VARCHAR (50) NOT NULL,
     Color VARCHAR (50) NOT NULL,
     Price DECIMAL (6, 2) NOT NULL,
