@@ -10,7 +10,7 @@
 <body>
 
     <form>
-        <h4>méthode d'expedition</h4>
+        <h3>méthode d'expedition</h3>
 
         <label for="Street">Adresse :</label><br>
         <input type="text" id="Street" name="Street" required><br><br>
@@ -25,8 +25,7 @@
         <input type="text" id="PostCode" name="PostCode"
             inputmode="numeric" placeholder="12345" pattern="[0-9]{5}" maxlength="5" required><br><br>
 
-        <input type="radio" id="dpd" name="dpd" value="dpd">
-        <label for="dpd">€9,95 Livré par DPD sous 2 à 4 jours ouvrables</label>
+
     </form>
 
 
@@ -81,7 +80,7 @@
         <label for="bons_achat">Bons d'achat</label><br><br>
 
     </form> -->
-    info cb
+    <h3>information cb</h3>
     <form action="">
         <label for="NumberCard">Numéro de carte :</label><br>
         <input type="text" id="NumberCard" name="NumberCard"
@@ -97,6 +96,11 @@
 
         <label for="NameCard">Nom du titulaire :</label><br>
         <input type="text" placeholder="Joe Dohn" id="NameCard" name="NameCard" required><br><br>
+
+        <input type="radio" id="dpd" name="dpd" value="dpd" required>
+        <label for="dpd">€9,95 Livré par DPD sous 2 à 4 jours ouvrables</label>
+
+
     </form>
 
 
@@ -105,7 +109,7 @@
 
     <form>
         <h4><strong>passez au reglement</strong></h4>
-        <a href="">voici le contenue de votre panier</a> <br> <br>
+        <a href="index.php?page=Panier">voici le contenue de votre panier</a> <br> <br>
         <button>encaissement</button>
     </form>
 </body>
