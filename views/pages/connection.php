@@ -49,6 +49,7 @@ if (!empty($_POST)) {
         <?php } ?>
             <input
 			type="submit"
-			value="Se Connecter" />       
+			value="Se Connecter" />    
+        <a class="inscription" href="views/pages/inscription.php">Inscription</a>      
     </form>
 </section>

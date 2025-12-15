@@ -27,8 +27,10 @@ France<br></p>
 </ul></p>
 <h1>Horaires</h1>
 <p>Notre service client est ouvert du lundi au vendredi de 8h à 17h via le mail de nos responsables.
+    <ul>
     <li>Lola EDELY : lolaedely33@gmail.com</li>
     <li>Nathan LE FRANC : lfc.nathan33@gmail.com</li>
     <li>Théo BOURT : bourt.theo@gmail.com</li>        
     <li>Yann POPOV : yann.popov@hotmail.fr</li>
+    </ul>
  </p></section>

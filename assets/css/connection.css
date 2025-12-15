@@ -1,20 +1,19 @@
 body{
- font-family: Arial, sans-serif;
     background: rgb(247, 223, 191);
     margin: 0;
     height: 100vh;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 #form {
-    margin: auto;
+    display: grid;
+    align-items: center;
+    margin:auto;
     background: white;
     padding: 25px;
     border-radius: 12px;
     width: 50%;
     height: 40%;
+    margin-bottom: 80px;
+    margin-top: 80px;
 }
 
  h1 {
@@ -41,15 +40,18 @@ p{
 label {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
 }
 
 input[type="email"],
 input[type="password"] {
-    padding: 10px;
+    padding: 14px;
     margin-top: 5px;
     border: 1px solid ;
     border-radius: 8px;
     background: white;
+    font-size: 16px;
 }
 
 input[type="email"]:focus,
@@ -74,4 +76,10 @@ input[type="submit"]:hover {
     background: rgb(222, 184,135);
 }
 
-
+.inscription{
+    color: rgb(186, 146, 108);
+    font-size: 20px;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+}

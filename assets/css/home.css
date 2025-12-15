@@ -1,0 +1,110 @@
+body{
+    background:rgb(255, 244, 228);
+    margin:0px;
+}
+h1{
+    color: rgb(186, 146, 108);
+}
+
+#hero{
+    background-image: url("../images/image_accueil.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 91vh;
+    display: flex;
+    align-self: center;
+    justify-content: flex-start;
+    color: #3c2a20;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255,244,228,0.85) 0%, rgba(255,244,228,0.55) 40%, rgba(255,244,228,0.2) 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 550px;
+  margin-left: 10%;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.02;
+  margin-top: 40% ;
+margin-left: 0;
+  color: rgb(86,48,30);
+}
+
+.hero .lead {
+  font-size: 18px;
+  margin-bottom: 24px;
+margin-left: 0;
+  color: rgb(103,68,49);
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 40px;
+    margin-left: 0;
+}
+
+.hero-buttons a{
+    padding: 15px 30px ;
+    background-color: rgb(186, 146, 108);
+    color:white;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 16px;
+}    
+
+.hero-buttons a:hover{
+    color:rgb(83, 39, 23);
+}
+
+h2{
+    margin-bottom: 20px;
+    color: rgb(132, 92, 55) ;
+    text-decoration: underline;
+}
+h3{
+    color: rgb(83, 39, 23);
+    font-size: 20px;
+}
+
+.grid{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    
+}
+.grid article{
+    min-width: 220px; 
+    flex-shrink: 0;   
+    text-align: center;
+    
+}
+
+.grid a{
+    padding: 5px 10px ;
+    background-color: black;
+    color:white;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+img{
+    height:200px;
+    width:auto;
+    margin: 20px;
+
+}

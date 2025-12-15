@@ -1,17 +1,25 @@
 body{
- font-family: Arial, sans-serif;
     background: rgb(255, 244, 228);
-    margin: 0;
-    padding: 20px;
+    margin: 0px;
 }
 
- h1 {
+h1 {
     text-align: center;
     margin-bottom: 40px;
     color: rgb(186, 146, 108);
+    font-size: 30px;
 }
-
-strong{
+section{
+    margin: 20px;
+}
+section p strong{
     color: rgb(138, 99, 64);
     text-decoration: underline;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
 }
