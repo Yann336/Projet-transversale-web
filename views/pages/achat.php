@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
 
 
 
-<form>
+<form method="post" action="index.php?page=achat">
         <h3>méthode d'expedition</h3>
 
         <label for="Street">Adresse :</label><br>
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
             inputmode="numeric" placeholder="12345" pattern="[0-9]{5}" maxlength="5" required><br><br>
 
 
-</form>
+
 
 
     <!-- <form>
@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
 
     </form> -->
     <h3>information cb</h3>
-    <form action="">
+
         <label for="NumberCard">Numéro de carte :</label><br>
         <input type="text" id="NumberCard" name="NumberCard"
             inputmode="numeric" placeholder="1234567890123456" pattern="[0-9]{16}" maxlength="16" required><br><br>
@@ -125,10 +125,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
 
 
         <h4><strong>passez au reglement</strong></h4>
-        <a href="index.php?page=Panier">voir le contenue de votre panier</a> <br> <br>
-    </form>
 
-    <form method="post" action="index.php?page=achat">
+        <a href="index.php?page=Panier">voir le contenue de votre panier</a> <br> <br>
+    
+
+    
         <input type="hidden" name="pay" value="1">
         <input type="submit" class="outline secondary" value="Payer">
     </form>
