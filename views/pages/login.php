@@ -24,7 +24,7 @@ if (!empty($_POST)) {
 ?>
 
 <section id="form">
-    <h1>Connection</h1>
+    <h1>Connexion</h1>
     <form method = post>
         <fieldset class=grid>
             <label>
