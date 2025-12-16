@@ -35,6 +35,7 @@ body {
 h2,
 h4 {
     color: rgb(83, 39, 23);
+    font-size: 25px;
 }
 
 .problem,
@@ -44,4 +45,10 @@ h4 {
     border: 1px solid #ccc;
     resize: vertical;
     font-size: 13px;
+}
+
+.problem,
+.numorder {
+    width: 100%;
+    box-sizing: border-box;
 }

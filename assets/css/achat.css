@@ -59,18 +59,41 @@ form {
     color: rgb(83, 39, 23);
 }
 
-input {
+input:not([type="radio"]) {
     border-radius: 12px;
     padding: 10px;
     border: 1px solid #ccc;
     resize: vertical;
     font-size: 13px;
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    margin: 10px auto;
+    box-sizing: border-box;
 }
+
 
 h4 {
     color: rgb(83, 39, 23);
+    font-size: 30px;
 }
 
 label:not([for="dpd"]) {
+    color: rgb(186, 146, 108);
+    font-size: 25px;
+}
+
+input[type="radio"] {
+    width: auto;
+    max-width: none;
+    display: inline-block;
+    margin: 0;
+}
+
+label.dpd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
     color: rgb(186, 146, 108);
 }

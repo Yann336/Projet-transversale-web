@@ -24,7 +24,7 @@ form.registration {
     color: white;
     border: none;
     border-radius: 40px;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
 }
 
@@ -38,8 +38,14 @@ input {
     border: 1px solid #ccc;
     resize: vertical;
     font-size: 13px;
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    margin: 10px auto;
+    box-sizing: border-box;
 }
 
 label {
     color: rgb(186, 146, 108);
+    font-size: 25px;
 }
