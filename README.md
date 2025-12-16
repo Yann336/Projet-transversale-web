@@ -120,7 +120,7 @@ phpMyAdmin est utilisé pour gérer la base de données du projet.
 
 
 
- http://localhost/Clarte\_Ornee\_Site\_Web/Projet-transversale-web/index.php
+ http://localhost/Projet-transversale-web/index.php
 
 
 
