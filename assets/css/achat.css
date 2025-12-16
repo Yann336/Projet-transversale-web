@@ -1,29 +1,46 @@
-.delivery_method {
-    border: 2px solid #000;
-    display: inline-block;
-    inline-size: 300px;
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    background: rgb(247, 223, 191);
+    margin: 0;
 }
 
-.payment_method {
-    border: 2px solid #000;
-    display: inline-block;
-    inline-size: 300px;
-    align-items: center;
+
+form {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
+
+.payment_column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.delivery_method,
+.payment_method,
 .payment {
-    border: 2px solid #000;
-    display: inline-block;
-    inline-size: 300px;
-    align-items: center;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background-color: rgb(200, 173, 127);
+    text-align: center;
+
+    flex: 1 1 280px;
+    max-width: 320px;
+    width: 100%;
 }
+
 
 .container {
     min-height: 100vh;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30px;
 }

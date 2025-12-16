@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
     <link rel="stylesheet" href="../../assets/css/inscription.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 
     <script>
         function verifierMotsDePasse() {
@@ -36,7 +35,6 @@
         <label for="Email">Email :</label><br>
         <input type="email" placeholder="@gmail.com" id="Email" name="Email" required><br><br>
 
-        <br>
         <label for="Street">Adresse :</label><br>
         <input type="text" id="Street" name="Street" required><br><br>
 
@@ -67,7 +65,7 @@
         <label>Confirmer le mot de passe :</label><br>
         <input type="password" id="confirm_password" required><br><br>
 
-        <input type="submit" value="Valider">
+        <input class="submit_button" type="submit" value="Valider">
     </form>
 
 </body>
