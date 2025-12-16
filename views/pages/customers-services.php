@@ -31,17 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['send'])) {
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAV</title>
-    <link rel="stylesheet" href="../../assets/css/SAV.css">
-</head>
-
-<body>
+<section>
     <div class="customer_srvc">
         <form class="customer_service" action="#">
 
@@ -59,6 +50,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['send'])) {
             <input class="submit_button" type="submit" value="envoyer">
         </form>
     </div>
-</body>
+</section>
 
-</html>

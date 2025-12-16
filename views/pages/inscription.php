@@ -1,31 +1,9 @@
 <?php include('models/add.php') ?>
-<!DOCTYPE html>
-<html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
-    <link rel="stylesheet" href="../../assets/css/inscription.css">
+<section>
 
-    <script>
-        function verifierMotsDePasse() {
-            const mdp1 = document.getElementById("password").value;
-            const mdp2 = document.getElementById("confirm_password").value;
-
-            if (mdp1 !== mdp2) {
-                alert("Les mots de passe ne correspondent pas !");
-                return false;
-            }
-            return true;
-        }
-    </script>
-</head>
-
-<body>
-
-    <form action="#" method="post" class="registration" onsubmit="return verifierMotsDePasse()">
-        <!-- mettre la page d'acceuil dans action-->
+    <form method="post" class="registration">
+        
 
         <label for="Name">Prénom :</label><br>
         <input type="text" id="Name" name="Name" required><br><br>
@@ -69,9 +47,8 @@
         <input class="submit_button" type="submit" value="Valider">
     </form>
 
-</body>
+</section>
 
-</html>
 <?php if (!empty($error)) { ?>
     <p><?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?></p>
 <?php } ?>

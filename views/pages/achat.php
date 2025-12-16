@@ -28,18 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
 
 ?>
 <section>
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="../../assets/css/achat.css">
-    </head>
-
-    <body>
-        <div class="container">
+        <div class="container-achat">
             <form action="#">
 
                 <div class="delivery_method">
@@ -94,7 +83,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
             </form>
         </div>
 
-    </body>
-
-
-    </html>
+</section>
