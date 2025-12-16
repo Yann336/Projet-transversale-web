@@ -2,7 +2,7 @@
 
 <h1>Inscription</h1>
 
-<form method="post">
+<form method="post" class="registration">
     <label for="Name">Prénom :</label><br>
     <input type="text" id="Name" name="Name" required><br><br>
 

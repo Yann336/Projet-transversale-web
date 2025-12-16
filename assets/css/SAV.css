@@ -1,0 +1,33 @@
+.customer_srvc {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(247, 223, 191);
+    margin: 0;
+}
+
+.customer_service {
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background-color: rgb(200, 173, 127);
+
+    width: 90%;
+    max-width: 800px;
+}
+
+.submit_button {
+    padding: 15px 30px;
+    background-color: rgb(186, 146, 108);
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit_button:hover {
+    color: rgb(83, 39, 23);
+}
