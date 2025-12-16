@@ -1,8 +1,9 @@
 <?php include('models/add.php') ?>
 <section>
-<h1>Inscription</h1>
+
 
 <form method="post" class="registration">
+    <h1>Inscription</h1>
     <label for="Name">Prénom :</label><br>
     <input type="text" id="Name" name="Name" required><br><br>
 

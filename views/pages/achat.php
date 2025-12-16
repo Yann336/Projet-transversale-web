@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
 
 ?>
 <section>
-<div class="container">
+<div class="containers">
         <form method="post" action="index.php?page=achat">
         <div class="delivery_method">
           <h4>méthode d'expedition</h4>

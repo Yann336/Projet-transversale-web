@@ -21,7 +21,7 @@
         <?php if ($lamp["TypeLamp"] == $type["TypeLamp"]) { ?>
             <article>
                 <header><a href="index.php?page=lamp-details&id=<?= htmlspecialchars($lamp['idLamp'], ENT_QUOTES, 'UTF-8') ?>">
-                    <img src='<?= htmlspecialchars($lamp["PathPicture"], ENT_QUOTES, 'UTF-8') ?>' alt='Image lampe'></a>
+                    <img class="img_lampe"src='<?= htmlspecialchars($lamp["PathPicture"], ENT_QUOTES, 'UTF-8') ?>' alt='Image lampe'></a>
                 </header>
                 
             </article>

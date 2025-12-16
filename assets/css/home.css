@@ -95,14 +95,14 @@ h3{
     
 }
 
-img{
+.img_lampe{
     height:200px;
     width:auto;
     margin: 20px;
     border-radius: 8%;
 }
 
-img:hover{
+.img_lampe:hover{
   transform: translateY(-10px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }

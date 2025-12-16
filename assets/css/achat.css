@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 section {
     min-height: 100vh;
     display: flex;
@@ -38,7 +41,7 @@ form {
 }
 
 
-.container {
+.containers {
     min-height: 100vh;
     display: flex;
     justify-content: center;
