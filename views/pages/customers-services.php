@@ -1,27 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include('dbConnect.php');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAV</title>
-    <link rel="stylesheet" href="../../assets/css/SAV.css">
-</head>
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['send'])) {
 
-<body>
-    <div class="customer_srvc">
-        <form class="customer_service" action="#">
 
-            <label for="description"><strong> décrire votre probleme :</strong></label><br>
-            <textarea name="message" rows="10" cols="105">
-        </textarea><br><br>
+    $email = $_SESSION['pseudo']; 
 
-            <label for="email"><strong>Numéro commande:</strong></label><br>
-            <input type="email" placeholder="N° commande" id="email" name="email" required><br><br>
+ 
+    $sql = "SELECT idCustomer FROM customers WHERE Email = :email LIMIT 1";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([':email' => $email]);
+    $customer = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            <input class="submit_button" type="submit" value="envoyer">
-        </form>
-    </div>
-</body>
+    if ($customer) {
 
-</html>
+        $sql = "INSERT INTO CustomerService (idCustomer, Request, OrderNumber)
+                VALUES (:idCustomer, :request, :orderNumber)";
+
+        $stmt = $db->prepare($sql);
+        $stmt->execute([
+            ':idCustomer'  => $customer['idCustomer'],
+            ':request'     => $_POST['message'],
+            ':orderNumber' => !empty($_POST['numorder']) ? $_POST['numorder'] : null
+        ]);
+
+        header('Location: index.php?page=home');
+        exit;
+    }
+}
+?>
+ 
+  <div class="customer_srvc">
+    <form method=post class="customer_service"> 
+
+        <label for="description" >Veuillez décrire votre probleme :</label><br>
+        <textarea name="message" id="message" rows="10" cols="105" required></textarea>
+        <br><br>
+
+
+        <label for="numorder">Numéro de commande</label><br>
+        <input type="number" placeholder="N° commande" id="numorder" name="numorder" required><br><br>
+
+
+        <input class="submit_button" type="submit" name="send" value="Envoyez">
+    </form>
+</div>
+

@@ -1,0 +1,151 @@
+body{
+    margin:0;
+    background: rgb(255, 244, 228) ;
+}
+
+.product {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 60px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+.left{
+    flex:0.6;
+    margin:40px;
+}
+.left img{
+    display: block;
+}
+.right{
+    flex: 1.4;
+    margin-top: 140px;
+}
+h1{
+    font-size: 42px;
+    font-weight: 600;
+    margin: 10px;
+    color: rgb(186, 146, 108);
+}
+
+h3 {
+    font-size: 23px;
+    color: rgb(186, 146, 108);
+    margin-bottom: 25px;
+    margin: 10px;
+}
+
+img {
+    height: 335px;
+    width:auto;
+    border-radius: 14px;
+}
+
+.attributs {
+    font-size: 20px;
+}
+
+.description {
+    font-size: 20px;
+}
+
+.price{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px;
+    color: black;
+}
+
+.button{
+    display: inline-block;
+    padding: 16px 36px;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    background-color: rgb(186, 146, 108);
+    color:white;
+}
+
+.button:hover {
+    color:rgb(83, 39, 23);
+}
+
+@media(max-width: 1024px) {
+    .product {
+        gap: 15px;
+        width: 80%;
+        margin: 120px;
+    }
+
+    .left {
+        margin: 20px;
+        flex: 1;
+    }
+
+    .right {
+        margin-top: 60px;
+        flex: 1;
+    }
+
+    img {
+        height: 280px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .description, .attributs {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 30px;
+    }
+
+    .left {
+        margin: 0;
+    }
+
+    .right {
+        margin-top: 20px;
+    }
+
+    img {
+        height: 220px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .description, .attributs {
+        font-size: 16px;
+    }
+
+    .prix {
+        font-size: 22px;
+    }
+
+    .bouton {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto 0;
+    }
+}

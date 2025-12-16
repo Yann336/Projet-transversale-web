@@ -1,20 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../assets/css/achat.css">
-</head>
+include('dbConnect.php');
 
-<body>
-    <div class="container">
-        <form action="#">
-            <div class="delivery_method">
-                <h4>méthode d'expedition</h4>
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
 
-                <label for="Street">Adresse :</label><br>
+
+    $email = $_SESSION['pseudo']; 
+
+    $sql = "SELECT idCustomer FROM customers WHERE Email = :email LIMIT 1";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([':email' => $email]);
+    $customer = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($customer) {
+
+  
+        $sql = "DELETE FROM baskets WHERE idCustomer = :idCustomer";
+        $stmt = $db->prepare($sql);
+        $stmt->execute([
+            ':idCustomer' => $customer['idCustomer']
+        ]);
+    }
+
+    header('Location: index.php?page=home');
+    exit;
+}
+
+?>
+
+
+<div class="container">
+        <form method="post" action="index.php?page=achat">
+        <div class="delivery_method">
+          <h4>méthode d'expedition</h4>
+
+         <label for="Street">Adresse :</label><br>
                 <input type="text" id="Street" name="Street" required><br><br>
 
                 <label for="City">Ville :</label><br>
@@ -58,7 +78,6 @@
             </div>
         </form>
     </div>
-</body>
 
 
-</html>
+

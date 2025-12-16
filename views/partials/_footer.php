@@ -1,0 +1,10 @@
+<footer class="page_footer">
+    <div class="container">
+    <p>Clartée Ornée &copy; 2025</p>
+    <a href="index.php?page=contact"> Contact </a>
+    <a href="index.php?page=FAQ"> FAQ </a>
+    <a href="index.php?page=legal_disclaimer"> Mentions Légales </a>
+    <a href="index.php?page=customers-services"> SAV </a>
+    <a href="index.php?page=about"> Notre entreprise </a>
+</div>
+</footer>
