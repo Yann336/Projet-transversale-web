@@ -1,7 +1,4 @@
-body{
-    margin: 0;
-}
-.customer_srvc {
+body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -15,7 +12,7 @@ body{
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    background-color: rgb(200, 173, 127);
+    background-color: rgb(242, 239, 234);
 
     width: 90%;
     max-width: 800px;
@@ -33,4 +30,25 @@ body{
 
 .submit_button:hover {
     color: rgb(83, 39, 23);
+}
+
+h2,
+h4 {
+    color: rgb(83, 39, 23);
+    font-size: 25px;
+}
+
+.problem,
+.numorder {
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-size: 13px;
+}
+
+.problem,
+.numorder {
+    width: 100%;
+    box-sizing: border-box;
 }
