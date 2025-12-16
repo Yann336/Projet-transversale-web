@@ -1,5 +1,5 @@
 <?php include('models/add.php') ?>
-
+<section>
 <h1>Inscription</h1>
 
 <form method="post" class="registration">
@@ -43,7 +43,7 @@
 
     <input type="submit" value="Valider">
 </form>
-
+</section>
 <?php if (!empty($error)) { ?>
     <p><?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?></p>
 <?php } ?>

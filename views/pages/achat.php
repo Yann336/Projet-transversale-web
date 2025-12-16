@@ -27,8 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
 }
 
 ?>
-
-
+<section>
 <div class="container">
         <form method="post" action="index.php?page=achat">
         <div class="delivery_method">
@@ -78,6 +77,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
             </div>
         </form>
     </div>
-
+</section>
 
 
