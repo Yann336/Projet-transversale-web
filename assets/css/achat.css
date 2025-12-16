@@ -44,3 +44,17 @@ form {
     justify-content: center;
     align-items: center;
 }
+
+.submit_button {
+    padding: 15px 30px;
+    background-color: rgb(186, 146, 108);
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit_button:hover {
+    color: rgb(83, 39, 23);
+}

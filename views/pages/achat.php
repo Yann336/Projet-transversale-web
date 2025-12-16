@@ -53,7 +53,7 @@
                 <div class="payment">
                     <h4><strong>passez au reglement</strong></h4>
                     <a href="">voici le contenue de votre panier</a> <br> <br>
-                    <button>encaissement</button>
+                    <input class="submit_button" type="submit" value="envoyer">
                 </div>
             </div>
         </form>

@@ -19,7 +19,7 @@
             <label for="email"><strong>Numéro commande:</strong></label><br>
             <input type="email" placeholder="N° commande" id="email" name="email" required><br><br>
 
-            <input class="submit_button" type="submit" value="prendre rendez vous">
+            <input class="submit_button" type="submit" value="envoyer">
         </form>
     </div>
 </body>
