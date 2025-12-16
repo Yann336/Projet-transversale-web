@@ -32,11 +32,13 @@ body {
     color: rgb(83, 39, 23);
 }
 
-h2 h4 {
+h2,
+h4 {
     color: rgb(83, 39, 23);
 }
 
-.problem .numorder {
+.problem,
+.numorder {
     border-radius: 12px;
     padding: 10px;
     border: 1px solid #ccc;

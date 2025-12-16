@@ -13,7 +13,7 @@
         <form class="customer_service" action="#">
 
             <label for="description"><strong>
-                    <h2> décrire votre probleme :</h2>
+                    <h2> Décrire votre probleme :</h2>
                 </strong></label><br>
             <textarea class="problem" name="message" rows="10" cols="105">
         </textarea><br><br>
