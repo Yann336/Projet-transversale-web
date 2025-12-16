@@ -12,12 +12,16 @@
     <div class="customer_srvc">
         <form class="customer_service" action="#">
 
-            <label for="description"><strong> décrire votre probleme :</strong></label><br>
-            <textarea name="message" rows="10" cols="105">
+            <label for="description"><strong>
+                    <h2> décrire votre probleme :</h2>
+                </strong></label><br>
+            <textarea class="problem" name="message" rows="10" cols="105">
         </textarea><br><br>
 
-            <label for="email"><strong>Numéro commande:</strong></label><br>
-            <input type="email" placeholder="N° commande" id="email" name="email" required><br><br>
+            <label for="numorder"><strong>
+                    <h4>Numéro commande:</h4>
+                </strong></label>
+            <input class="numorder" type="text" placeholder="N° commande" id="numorder" name="numorder" required><br><br>
 
             <input class="submit_button" type="submit" value="envoyer">
         </form>
