@@ -225,6 +225,10 @@ a{
         gap: 12px;
     }
 
+    .btn-delete img {
+        width: 24px;
+    }
+
     #quantite {
         width: 100%;
         margin-top: 5px;
