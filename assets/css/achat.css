@@ -1,7 +1,4 @@
-body{
-    margin: 0;
-}
-section {
+body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -32,7 +29,7 @@ form {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    background-color: rgb(200, 173, 127);
+    background-color: rgb(242, 239, 234);
     text-align: center;
 
     flex: 1 1 280px;
@@ -41,7 +38,7 @@ form {
 }
 
 
-.containers {
+.container {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -60,4 +57,43 @@ form {
 
 .submit_button:hover {
     color: rgb(83, 39, 23);
+}
+
+input:not([type="radio"]) {
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-size: 13px;
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+
+h4 {
+    color: rgb(83, 39, 23);
+    font-size: 30px;
+}
+
+label:not([for="dpd"]) {
+    color: rgb(186, 146, 108);
+    font-size: 25px;
+}
+
+input[type="radio"] {
+    width: auto;
+    max-width: none;
+    display: inline-block;
+    margin: 0;
+}
+
+label.dpd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+
 }
