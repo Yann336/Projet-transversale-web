@@ -28,11 +28,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
 
 ?>
 <section>
-        <div class="container-achat">
-            <form action="#">
+        <div class="container-achat" action="index.php?page=achat">
+            <form method = 'post' >
 
                 <div class="delivery_method">
-                    <h4>méthode d'expedition</h4>
+                    <h4>Méthode d'expedition</h4>
 
                     <label for="Street">Adresse :</label>
                     <input type="text" id="Street" name="Street" required>
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
                 <div class="payment_column">
 
                     <div class="payment_method">
-                        <h4>méthode de payement</h4>
+                        <h4>Méthode de payement</h4>
 
                         <label for="NumberCard">Numéro de carte :</label>
                         <input type="text" id="NumberCard" name="NumberCard"
@@ -73,9 +73,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
                     </div>
 
                     <div class="payment">
-                        <h4><strong>passez au reglement</strong></h4>
-                        <a href="">voici le contenue de votre panier</a>
-                        <input class="submit_button" type="submit" value="envoyer">
+                        <h4><strong>Passer au règlement</strong></h4>
+                        <a href="index.php?page=basket">Voir le panier</a>
+
+
+                        <input type="hidden" name="pay" value="1">
+                        <input type="submit" class="submit_button" value="Payer">
                     </div>
 
                 </div>
@@ -84,3 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
         </div>
 
 </section>
+
+    
+        
+    

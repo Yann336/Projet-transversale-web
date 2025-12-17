@@ -39,16 +39,16 @@
 
 
         <label>Mot de passe :</label><br>
-        <input type="password" id="password" required><br><br>
+        <input type="password" id="password" name="password" required><br><br>
 
         <label>Confirmer le mot de passe :</label><br>
-        <input type="password" id="confirm_password" required><br><br>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
 
+        <?php if (!empty($error)) { ?>
+            <p><?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?></p>
+        <?php } ?>
         <input class="submit_button" type="submit" value="Valider">
     </form>
 
 </section>
 
-<?php if (!empty($error)) { ?>
-    <p><?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?></p>
-<?php } ?>

@@ -34,20 +34,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['send'])) {
 
 <section>
     <div class="customer_srvc">
-        <form class="customer_service" action="#">
+        <form class="customer_service" method="post">
 
             <label for="description"><strong>
                     <h2> Décrire votre probleme :</h2>
                 </strong></label><br>
-            <textarea class="problem" name="message" rows="10" cols="105">
-        </textarea><br><br>
+            <textarea class="problem" name="message" rows="10" cols="105" required></textarea><br><br>
 
             <label for="numorder"><strong>
                     <h4>Numéro commande:</h4>
                 </strong></label>
-            <input class="numorder" type="text" placeholder="N° commande" id="numorder" name="numorder" required><br><br>
+            <input class="numorder" type="text" placeholder="N° commande" id="numorder" name="numorder"><br><br>
 
-            <input class="submit_button" type="submit" value="envoyer">
+            <input class="submit_button" type="submit" name="send"value="envoyer">
         </form>
     </div>
 </section>
