@@ -4,7 +4,6 @@ include('dbConnect.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
 
-
     $email = $_SESSION['pseudo'];
 
     $sql = "SELECT idCustomer FROM customers WHERE Email = :email LIMIT 1";

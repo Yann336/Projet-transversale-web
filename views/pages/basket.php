@@ -58,7 +58,7 @@ if(isset($_POST['promo']) && $_POST['promo'] == 'EPSI'){
     </div>
 
     <div>
-        <a href="index.php?page=achat">
+        <a href='index.php?page=achat'>
             <button type="button" class="btn-livraison">CONTINUER VERS LA LIVRAISON</button>
         </a>
     </div>
